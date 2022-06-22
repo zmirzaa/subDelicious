@@ -96,47 +96,47 @@ class User:
         return connectToMySQL(cls.db).query_db( query, data ) 
 
 
-    # @classmethod
-    # def getUserFavorites(cls,data): 
-    #     query = "SELECT * from orders LEFT join favorites on favorites.order_id = orders.id LEFT JOIN users on favorites.user_id = users.id WHERE users.id = %(id)s;"
-    #     results = connectToMySQL(cls.db).query_db( query, data ) 
-    #     user = cls(results[0])
-    #     for row in results:
-    #         orderData = {
-    #             'id': row['orders.id'],
-    #             'method': row['method'],
-    #             'size': row['size'],
-    #             'bread': row['bread'],
-    #             'meat': row['meat'], 
-    #             'toppings': row['toppings'],
-    #             'quantity': row['quantity'],
-    #             'user_id': row['user_id'],
-    #             'createdAt': row['orders.createdAt'],
-    #             'updatedAt': row['orders.updatedAt']
-    #         }
-    #         user.favorites.append( order.Order( orderData ) )
-    #         user.orders.append(orderData["id"])
-    #     return user
+    @classmethod
+    def getUserFavorites(cls,data): 
+        query = "SELECT * from orders LEFT join favorites on favorites.order_id = orders.id LEFT JOIN users on favorites.user_id = users.id WHERE users.id = %(id)s;"
+        results = connectToMySQL(cls.db).query_db( query, data ) 
+        user = cls(results[0])
+        for row in results:
+            orderData = {
+                'id': row['orders.id'],
+                'method': row['method'],
+                'size': row['size'],
+                'bread': row['bread'],
+                'meat': row['meat'], 
+                'toppings': row['toppings'],
+                'quantity': row['quantity'],
+                'user_id': row['user_id'],
+                'createdAt': row['orders.createdAt'],
+                'updatedAt': row['orders.updatedAt']
+            }
+            user.favorites.append( order.Order( orderData ) )
+            user.orders.append(orderData["id"])
+        return user
         
 
 
-    # @classmethod 
-    # def getUserOrders(cls,data):
-    #     query = "SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id WHERE users.id = %(id)s;"
-    #     results = connectToMySQL(cls.db).query_db(query, data)
-    #     user = cls(results[0])
-    #     for row in results: 
-    #         orderData = {
-    #             'id': row['orders.id'],
-    #             'method': row['method'],
-    #             'size': row['size'],
-    #             'bread': row['bread'],
-    #             'meat': row['meat'], 
-    #             'toppings': row['toppings'],
-    #             'quantity': row['quantity'],
-    #             'user_id': row['user_id'],
-    #             'createdAt': row['orders.createdAt'],
-    #             'updatedAt': row['orders.updatedAt']
-    #         }
-    #         user.orders.append(order.Order(orderData)) 
-    #     return user 
+    @classmethod 
+    def getUserOrders(cls,data):
+        query = "SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id WHERE users.id = %(id)s;"
+        results = connectToMySQL(cls.db).query_db(query, data)
+        user = cls(results[0])
+        for row in results: 
+            orderData = {
+                'id': row['orders.id'],
+                'method': row['method'],
+                'size': row['size'],
+                'bread': row['bread'],
+                'meat': row['meat'], 
+                'toppings': row['toppings'],
+                'quantity': row['quantity'],
+                'user_id': row['user_id'],
+                'createdAt': row['orders.createdAt'],
+                'updatedAt': row['orders.updatedAt']
+            }
+            user.orders.append(order.Order(orderData)) 
+        return user 
