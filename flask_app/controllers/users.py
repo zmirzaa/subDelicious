@@ -115,8 +115,9 @@ def favorite():
     return redirect("/account") 
 
 
-@app.route('/addFavorite', methods=['POST'])
-def favorite():
+
+@app.route('/removeFavorite', methods=['POST'])
+def removeFavorite():
     data = {
         'order_id': request.form['order_id']
     }
