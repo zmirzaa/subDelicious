@@ -2,6 +2,7 @@ from crypt import methods
 from flask_app import app
 from flask import render_template, redirect, session, request, flask
 from flask_app.models.order import Order
+from flask_app.models.user import User
 
 
 # Editing an order
@@ -10,11 +11,18 @@ from flask_app.models.order import Order
 def editOrder(id):
     if 'user_id' not in session:
         return redirect('/logout')
+    
+    data = {
+        'user_id': session['user_id']
+    }
+
     order_data = {
         'id': id
     }
     order = Order.getOneOrder(order_data)
-    return render_template('editOrder.html', order = order)
+    user = User.getOne(data)
+    return render_template('editOrder.html', order = order, user=user)
+
 
 @app.route('/order/update', methods = ['POST'])
 def updateOrder():
@@ -39,7 +47,13 @@ def updateOrder():
 
 @app.route('/order/new')
 def newOrder():
-    return render_template('newOrder.html')
+    if 'user_id' not in session: 
+        return redirect ('/logout')
+    data = {
+        'id': session['user_id']
+    }
+    return render_template('newOrder.html', user=User.getOne(data))
+
 
 @app.route('/order/submit', methods = ['POST'])
 def submitOrder():
@@ -57,7 +71,6 @@ def submitOrder():
     }
     Order.newOrder(newOrder)
     return redirect('/checkout')
-
 
 # if the user deletes their order at checkout (or deletes it from their favorites?)
 

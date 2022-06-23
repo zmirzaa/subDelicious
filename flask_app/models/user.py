@@ -19,6 +19,7 @@ class User:
         self.createdAt = data['createdAt']
         self.updatedAt = data['updatedAt']
         self.orders = []
+        self.favorites = []
 
 
     @staticmethod
@@ -94,8 +95,14 @@ class User:
     def favorite(cls,data): 
         query = "INSERT INTO favorites (user_id, order_id) VALUES (%(user_id)s, %(order_id)s);"
         return connectToMySQL(cls.db).query_db( query, data ) 
+    
 
-
+    @classmethod
+    def unfavorite(cls,data): 
+        query = "DELETE FROM favorites WHERE order_id= %(order_id)s;"
+        return connectToMySQL(cls.db).query_db( query, data )
+    
+    
     @classmethod
     def getUserFavorites(cls,data): 
         query = "SELECT * from orders LEFT join favorites on favorites.order_id = orders.id LEFT JOIN users on favorites.user_id = users.id WHERE users.id = %(id)s;"
@@ -118,7 +125,15 @@ class User:
             user.orders.append(orderData["id"])
         return user
         
-
+    @classmethod
+    def unfavoritedOrders(cls,data):
+        query = "SELECT * FROM orders WHERE orders.id NOT IN ( SELECT order_id FROM favorites WHERE user_id = %(id)s );"
+        results = connectToMySQL('orders').query_db(query,data)
+        orders = []
+        for row in results:
+            orders.append(cls(row))
+        print(orders)
+        return orders
 
     @classmethod 
     def getUserOrders(cls,data):

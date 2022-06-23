@@ -82,7 +82,7 @@ def accountPage():
     userData = {
         "id": session['user_id']
     }
-    return render_template('edit.html', user=User.getOne(userData), orders=User.getUserOrders(userData)) 
+    return render_template('edit.html', user=User.getOne(userData), unfavoritedOrders=User.unfavoritedOrders(userData), allOrders=User.getUserOrders(userData)) 
 
 
 @app.route('/update', methods=['POST']) 
@@ -102,6 +102,28 @@ def update():
     }
     User.update(data)
     return redirect('/dashboard')
+
+
+
+@app.route('/addFavorite', methods=['POST'])
+def favorite():
+    data = {
+        'user_id': session['user_id'],
+        'order_id': request.form['order_id']
+    }
+    User.favorite(data)
+    return redirect("/account") 
+
+
+
+@app.route('/removeFavorite', methods=['POST'])
+def removeFavorite():
+    data = {
+        'order_id': request.form['order_id']
+    }
+    User.unfavorite(data)
+    return redirect("/dashboard") 
+
 
 
 @app.route('/logout') 
