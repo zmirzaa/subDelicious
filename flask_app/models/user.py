@@ -92,7 +92,7 @@ class User:
 
     @classmethod
     def favorite(cls,data): 
-        query = "INSERT INTO favorites (user_id, order_id) VALUES (%(user_id)s, %(plant_id)s);"
+        query = "INSERT INTO favorites (user_id, order_id) VALUES (%(user_id)s, %(order_id)s);"
         return connectToMySQL(cls.db).query_db( query, data ) 
 
 
