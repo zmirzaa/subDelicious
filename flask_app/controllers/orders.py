@@ -54,6 +54,7 @@ def newOrder():
     }
     return render_template('newOrder.html', user=User.getOne(data))
 
+
 @app.route('/order/submit', methods = ['POST'])
 def submitOrder():
     isValid = Order.validate_order(request.form)
