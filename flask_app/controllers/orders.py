@@ -1,4 +1,5 @@
 from crypt import methods
+from xml.dom import UserDataHandler
 from flask_app import app
 from flask import render_template, redirect, session, request, flask
 from flask_app.models.order import Order
@@ -40,7 +41,39 @@ def updateOrder():
         'quantity' : request.form['quantity'],
     }
     Order.updateOrder(order_data)
-    return redirect('/checkout') # ALEX / JONATHAN please add a checkout page for viewing the cart
+    return redirect('/checkout')
+
+# Checkout Page
+
+@app.route('/order/checkout/<int:id>')
+def checkout(id):
+    if 'user_id' not in session:
+        return redirect ('/logout')
+    order_data = {
+        'id' : id
+    }
+    user_data = {
+        'user_id': session['user_id']
+    }    
+    order = Order.getOneOrder(order_data)
+    user = User.getOne(user_data)
+    return render_template('checkout.html', order = order, user = user)
+
+# Order Confirmation Page
+
+@app.route('/checkout/confirmation/<int:id>')
+def confirmation(id):
+    if 'user_id' not in session:
+        return redirect ('/logout')
+    order_data = {
+        'id' : id
+    }
+    user_data = {
+        'user_id': session['user_id']
+    }    
+    order = Order.getOneOrder(order_data)
+    user = User.getOne(user_data)
+    return render_template('confirmation.html', order = order, user = user) 
 
 
 # Creating a new order!
