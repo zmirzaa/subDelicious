@@ -82,7 +82,7 @@ def accountPage():
     userData = {
         "id": session['user_id']
     }
-    return render_template('edit.html', user=User.getOne(userData), unfavoritedOrders=User.unfavoritedOrders(userData), allOrders=User.getUserOrders(userData)) 
+    return render_template('account.html', user=User.getOne(userData), unfavoritedOrders=User.unfavoritedOrders(userData), allOrders=User.getUserOrders(userData)) 
 
 
 @app.route('/update', methods=['POST']) 
