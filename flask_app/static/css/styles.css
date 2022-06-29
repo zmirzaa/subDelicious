@@ -1,0 +1,48 @@
+#main {
+width: 100%; 
+height: 500px;
+background-image: url(/static/img/subb.jpeg);
+background-size: 50%;
+}
+
+.title {
+    font-family: 'Alfa Slab One', cursive;
+
+}
+
+.text {
+    font-family: 'Secular One', sans-serif;
+    font-style: italic;
+}
+
+#title {
+    color: white;
+    background-color: black;
+    mix-blend-mode: screen;
+}
+
+.btn-success {
+    font-family: 'Secular One', sans-serif;
+    color: blue;
+    background-color: white;
+}
+
+.btn-success:hover {
+    color: blue;
+    background-color: white;
+}
+
+
+.btn-primary {
+    background-color: rgb(90, 0, 150);
+    border: none; 
+}
+
+.btn-primary:hover {
+    background-color: rgb(90, 0, 150);
+    border: none; 
+}
+ 
+.register {
+    width: 400px;
+ }

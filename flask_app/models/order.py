@@ -1,4 +1,3 @@
-# from winreg import QueryInfoKey
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models import user
 from flask import flash
@@ -23,9 +22,6 @@ class Order:
         if len(order['toppings']) < 1:
             isValid = False
             flash("Please select at least one topping.", "order")
-        if order['quantity'] < 1:
-            isValid = False
-            flash("Please change the quantity of sandwiches to at least one.", "order")
         return isValid
 
     @classmethod
