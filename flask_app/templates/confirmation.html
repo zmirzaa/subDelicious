@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"> 
+    <title>Confirmed</title>
+</head>
+<body id="confirmation_container">
+    
+    
+    <nav class="checkout_top_bar">
+        <h1 class="dashboard_title">Sub-Delicious</h1>
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
+        <a class="checkout_nav_bar_button" href="/">Logout</a>
+        
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
+        <a class="checkout_nav_bar_button" href="/account">My Orders</a>
+
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/account/">My Account</a>
+        
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="add image">
+        <a class="checkout_nav_bar_button" href="/dashboard">Home</a>
+    </nav>
+    
+
+<div class="thank_you">
+    <h1>Thank you for your purchase!</h1>
+</div>
+<div class="thank_you_info">
+    <p>Your order has been confirmed!</p>
+    <br>
+    <p>Check your email for a confirmtation email. Details will include where to pick up your order, and when your order will be avaible for pick-up.</p>
+    <h2 class="confirmation_title">~ Sub-Delicious ~</h2>
+</div>
+
+
+
+
+    <div class="confirmation_bottom_bar">
+        &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol. Also, why are you still reading this. 
+    </div>
+    
+
+</body>
+</html>

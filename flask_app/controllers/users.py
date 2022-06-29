@@ -82,8 +82,8 @@ def accountPage():
     userData = {
         "id": session['user_id']
     }
-    return render_template('edit.html', user=User.getOne(userData), unfavoritedOrders=User.unfavoritedOrders(userData), allOrders=User.getUserOrders(userData)) 
-
+    return render_template('account.html', user=User.getOne(userData), unfavoritedOrders=User.unfavoritedOrders(userData), allOrders=User.getUserOrders(userData)) 
+                    # RENAME TO ACCOUNT.HTML
 
 @app.route('/update', methods=['POST']) 
 def update():
@@ -130,3 +130,21 @@ def removeFavorite():
 def logout(): 
     session.clear() 
     return redirect('/')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route('/test')
+def test(): 
+
+    return render_template("confirmation.html")

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"> 
+    <title>Cart</title>
+</head>
+<body id="container" >
+    
+    <nav class="checkout_top_bar">
+        <h1 class="dashboard_title">Sub-Delicious</h1>
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
+        <a class="checkout_nav_bar_button" href="/">Logout</a>
+        
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
+        <a class="checkout_nav_bar_button" href="/account">My Orders</a>
+
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/account/">My Account</a>
+        
+        <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="add image">
+        <a class="checkout_nav_bar_button" href="/dashboard">Home</a>
+    </nav>
+    
+
+
+
+
+
+
+    <main>
+        <div class="wrapper">
+            <h1 class="cart_title">My Cart</h1>
+            <div class="project">
+                <div class="shop">
+                    <div class="box">
+                        <img class="sub_photos" src="{{ url_for('static', filename='img/cart_sub.jpg') }}" alt="sub image">
+                        <div class="content">
+                            <h3 class="cart_sub_title">All-American Club</h3>
+                            <h4>Price: $8.95</h4>
+                            <p class="unit">Quantity:<input value="2"></p>
+                            <p class="btn-area">
+                                <span class="btn2"><button href="/order/delete/"></button>Remove</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img class="sub_photos" src="{{ url_for('static', filename='img/cart_sub2.jpg') }}" alt="sub image">
+                        <div class="content">
+                            <h3 class="cart_sub_title">Italian Style</h3>
+                            <h4>Price: $10.95</h4>
+                            <p class="unit">Quantity:<input type="text"></p>
+                            <p class="btn-area">
+                                <span class="btn2"><button href="/order/delete/"></button>Remove</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img class="sub_photos" src="{{ url_for('static', filename='img/cart_sub3.jpg') }}" alt="sub image">
+                        <div class="content">
+                            <h3 class="cart_sub_title">Supreme Meats</h3>
+                            <h4>Price: $5.95</h4>
+                            <p class="unit">Quantity:<input type="text"></p>
+                            <p class="btn-area">
+                                <span class="btn2"><button href="/order/delete/"></button>Remove</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bar">
+                    <p><span>Subtotal:</span> <span class="total">$67.89</span></p>
+                    <p><span>Tax:</span> <span class="total">$4.29</span></p>
+                    <p><span>Total:</span> <span class="total">$73.08</span></p>
+                    <button class="submit_order_button"><a class="start_button" href="/checkout/confirmation/">Confirm Order</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="checkout_bottom_bar">
+        &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this. 
+    </div>
+    
+</body>
+</html>

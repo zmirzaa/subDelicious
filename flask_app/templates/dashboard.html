@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"> 
+    <link rel="stylesheet" type="text/js" href="{{ url_for('static',filename='mian.js') }}"> 
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Sub-Delicious</title>
+</head>
+<body id="container">
+    
+
+
+
+    <nav class="dashboard_top_bar">
+        <h1 class="dashboard_title">Sub-Delicious</h1>
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
+        <a class="nav_bar_button" href="/">Logout</a>
+        
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/account">My Orders</a>
+        
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/cart.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/order/checkout/">Cart</a>
+
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/account/">My Account</a>
+    </nav>
+
+
+
+
+
+
+
+    <!-- CAROUSEL_SLIDER -->
+    <section aria-label="newest photos">
+        <div class="carousel" data-carousel>
+        <button class="carousel_button_next" data-carousel-button="next">&#8656;</button>
+        <button class="carousel_button_prev" data-carousel-button="prev">&#8658;</button>
+        <ul data-slides>
+            <li class="slide" data-active>
+                <img src="{{ url_for('static', filename='img/img2.jpg') }}" alt="carousel image">
+            </li>
+            <li class="slide">
+                <img src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="carousel image2">
+            </li>
+            <li class="slide">
+                <img src="{{ url_for('static', filename='img/background_sub2.jpg') }}" alt="carousel image3">
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- <button class="carousel_button_next" onclick= before(); src="{{ url_for('static', filename='img/img2.jpg') }}" data-carousel-button="next">&#8656;</button>
+<img id="image-area" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="carousel image2">
+<button class="carousel_button_prev" onclick= after(); src="{{ url_for('static', filename='img/sub2.jpg') }}" data-carousel-button="prev">&#8658;</button>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="dashboard_info">
+    <h1>Choose from our Classics</h1>
+    <p>Check out some of our classic subs below or start a new order to your liking!</p>
+</div>
+<div>
+    <button class="new_order_button"><a class="start_button" href="/order/new">Start New Order</a></button>
+</div>
+
+
+
+
+
+<div class="text_above_subs1">
+    <p>Meatball Sub</p>
+    <p>Italian Style</p>
+</div>
+<div class="sub_photos_container1">
+    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo.jpg') }}" alt="sub image">
+    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo1.jpg') }}" alt="sub image">
+</div>
+<div class="start_button_container">
+    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
+    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
+</div>
+
+
+
+
+
+
+
+<div class="text_above_subs2">
+    <p>All-American Club</p>
+    <p>Roast Beef</p>
+</div>
+<div class="sub_photos_container2">
+    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo2.jpg') }}" alt="sub image">
+    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo3.jpg') }}" alt="sub image">
+</div>
+<div class="start_button_container">
+    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
+    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="text_above_subs3">
+    <p>Baja Steak & Jack</p>
+    <p>Supreme Meats</p>
+</div>
+<div class="sub_photos_container3">
+    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo4.jpg') }}" alt="sub image">
+    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo5.jpg') }}" alt="sub image">
+</div>
+<div class="start_button_container">
+    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
+    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="dashboard_bottom_bar">
+        &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this. 
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF630JCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
