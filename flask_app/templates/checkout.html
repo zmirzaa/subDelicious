@@ -22,14 +22,7 @@
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="add image">
         <a class="checkout_nav_bar_button" href="/dashboard">Home</a>
     </nav>
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> 313187309bf78b88bb80eb7ae05f74be34cd0ec5
 
     <main>
         <div class="wrapper">
@@ -39,41 +32,28 @@
                     <div class="box">
                         <img class="sub_photos" src="{{ url_for('static', filename='img/cart_sub.jpg') }}" alt="sub image">
                         <div class="content">
+                            <h3 class="cart_sub_title"> {{user.firstName}}'s Delicious Custom Sub</h3>
+                            <p>Toppings: Unlimited toppings for $8.95</p> 
+                            <p> Method: {{order.method}}</p>
+                            <p>Size: {{order.size}}</p>
+                            <p>Bread: {{order.bread}}</p>
+                            <p>Meats: {{order.meat}}</p>
+                            <p>Price: $8.95</p>
+
+                            <p class="unit">Quantity: {{order.quantity}}</p>
                             <h3 class="cart_sub_title">{{user.order}}</h3>
                             <h4>Price: $8.95</h4>
                             <p class="unit">Quantity:<input value="2"></p>
                             <p class="btn-area">
-                                <span class="btn2"><button href="/order/delete/"></button>Remove</span>
+                                <span class="btn2"><button href="/order/delete/{{order.id}}"></button>Remove</span>
                             </p>
                         </div>
                     </div>
-                    <div class="box">
-                        <img class="sub_photos" src="{{ url_for('static', filename='img/cart_sub2.jpg') }}" alt="sub image">
-                        <div class="content">
-                            <h3 class="cart_sub_title">Italian Style</h3>
-                            <h4>Price: $10.95</h4>
-                            <p class="unit">Quantity:<input type="text"></p>
-                            <p class="btn-area">
-                                <span class="btn2"><button href="/order/delete/"></button>Remove</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img class="sub_photos" src="{{ url_for('static', filename='img/cart_sub3.jpg') }}" alt="sub image">
-                        <div class="content">
-                            <h3 class="cart_sub_title">Supreme Meats</h3>
-                            <h4>Price: $5.95</h4>
-                            <p class="unit">Quantity:<input type="text"></p>
-                            <p class="btn-area">
-                                <span class="btn2"><button href="/order/delete/"></button>Remove</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    
                 <div class="right-bar">
-                    <p><span>Subtotal:</span> <span class="total">$67.89</span></p>
-                    <p><span>Tax:</span> <span class="total">$4.29</span></p>
-                    <p><span>Total:</span> <span class="total">$73.08</span></p>
+                    <p><span>Subtotal:</span> <span class="total">$8.95</span></p>
+                    <p><span>Tax:</span> <span class="total">$1.35</span></p>
+                    <p><span>Total:</span> <span class="total">$10.30</span></p>
                     <button class="submit_order_button"><a class="start_button" href="/checkout/confirmation/">Confirm Order</a></button>
                 </div>
             </div>
