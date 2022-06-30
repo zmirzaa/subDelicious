@@ -123,14 +123,9 @@ class User:
                 'createdAt': row['favorites.createdAt'],
                 'updatedAt': row['favorites.updatedAt']
             }
-            user.favorites.append( order.Order( orderData ) )
-            user.orders.append(orderData["id"])
-        return user
-        
             favorites.append( order.Order( orderData ) )
-            favorites.append(order)
-            print(orderData)
-        return favorites
+            favorites.append(orderData["id"])
+            return favorites
         
 
         
