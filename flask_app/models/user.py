@@ -91,48 +91,10 @@ class User:
         query = "INSERT INTO users ( firstName , lastName , email , password, street, city, zipcode, state, createdAt, updatedAt ) VALUES ( %(firstName)s , %(lastName)s , %(email)s , %(password)s, %(street)s, %(city)s, %(zipcode)s, %(state)s,  NOW() , NOW() );"
         return connectToMySQL(cls.db).query_db( query, data )
     
-
-    @classmethod
-    def favorite(cls,data): 
-        query = "INSERT INTO favorites (user_id, order_id) VALUES (%(user_id)s, %(order_id)s);"
-        return connectToMySQL(cls.db).query_db( query, data ) 
-    
-
-    @classmethod
-    def unfavorite(cls,data): 
-        query = "DELETE FROM favorites WHERE order_id= %(order_id)s;"
-        return connectToMySQL(cls.db).query_db( query, data )
-    
-    
-    @classmethod
-    def getUserFavorites(cls,data): 
-        query = "SELECT * from orders LEFT join favorites on favorites.order_id = orders.id LEFT JOIN users on favorites.user_id = users.id WHERE users.id = %(id)s;"
-        results = connectToMySQL(cls.db).query_db( query, data ) 
-        print(results)
-        favorites = []
-        for row in results:
-            orderData = {
-                'id': row['favorites.id'],
-                'method': row['method'],
-                'size': row['size'],
-                'bread': row['bread'],
-                'meat': row['meat'], 
-                'toppings': row['toppings'],
-                'quantity': row['quantity'],
-                'user_id': row['user_id'],
-                'createdAt': row['favorites.createdAt'],
-                'updatedAt': row['favorites.updatedAt']
-            }
-            favorites.append( order.Order( orderData ) )
-            favorites.append(orderData["id"])
-            return favorites
-        
-
     @classmethod 
     def getUserOrders(cls,data):
         query = "SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id WHERE users.id = %(id)s;"
         results = connectToMySQL(cls.db).query_db(query, data)
-        user = cls(results[0])
         orders = []
         for row in results: 
             orderData = {
@@ -147,5 +109,5 @@ class User:
                 'createdAt': row['orders.createdAt'],
                 'updatedAt': row['orders.updatedAt']
             }
-            user.orders.append(order.Order(orderData)) 
+            orders.append(order.Order(orderData)) 
         return orders 

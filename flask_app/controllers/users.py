@@ -1,6 +1,7 @@
 from flask_app import app 
 from flask import render_template, redirect, session, request, flash 
 from flask_app.models.user import User 
+from flask_app.models.order import Order 
 from flask_bcrypt import Bcrypt
 
 bcrypt = Bcrypt(app)
@@ -104,46 +105,8 @@ def update():
 
 
 
-@app.route('/addFavorite', methods=['POST'])
-def favorite():
-    data = {
-        'user_id': session['user_id'],
-        'order_id': request.form['order_id']
-    }
-    User.favorite(data)
-    return redirect("/account") 
-
-
-
-@app.route('/removeFavorite', methods=['POST'])
-def removeFavorite():
-    data = {
-        'order_id': request.form['order_id']
-    }
-    User.unfavorite(data)
-    return redirect("/dashboard") 
-
-
-
 @app.route('/logout') 
 def logout(): 
     session.clear() 
     return redirect('/')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@app.route('/test')
-def test(): 
-
-    return render_template("account.html")

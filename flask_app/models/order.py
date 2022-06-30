@@ -33,14 +33,6 @@ class Order:
     def updateOrder(cls, data):
         query = 'UPDATE orders SET method = %(method)s, size = %(size)s, bread = %(bread)s, meat = %(meat)s, toppings = %(toppings)s, quantity = %(quantity)s, updatedAT = NOW() WHERE id = %(id)s;'
 
-    @classmethod
-    def getAllUserOrders(cls, data):
-        query = 'SELECT * from orders where user_id=%(user_id)s order by id desc;'
-        results = connectToMySQL(cls.db).query_db(query, data)
-        orders = []
-        for order in results:
-            orders.append(cls(order))
-        return orders
 
     @classmethod
     def getRecentOrder(cls, data):
