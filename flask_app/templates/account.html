@@ -89,7 +89,20 @@
                         <h3 class="mt-3 text-center">First & Last</h3>
                         <hr class="badge-primary mt-0 w-25">
                         <div class="row">
-                           
+                            <input type="hidden" name="id" value="{{user.id}}">
+                            <input type="hidden" name="password" value="{{user.password}}">
+                            <input type="hidden" name="confirm" value="{{user.password}}">
+                            <div class="col-sm-6">
+                                <label class="font-weight-bold" for="firstName">First Name:</label>
+                                <input type="text" name="email" value="{{user.email}}">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="font-weight-bold" for="firstName">First Name:</label>
+                                <input type="text" name="firstName" value="{{user.firstName}}">
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="font-weight-bold" for="lastName">Last Name:</label>
+                                <input type="text" name="lastName" value="{{user.lastName}}">
                             </div>
                             <br>
                             <br>
@@ -97,7 +110,28 @@
                         </div>
                         <h4 class="mt-3 text-center">Address</h4>
                         <hr class="bg-primary">
-                        
+                        <div class="rom">
+                            <div class="col-sm-6">
+                                <label class="font-weight-bold" for="street">Street:</label>
+                                <input type="text" name="street" value="{{user.street}}">
+                            </div>
+                            <br>
+                            <div class="col-sm-6">
+                                <label class="font-weight-bold" for="city">City:</label>
+                                <input type="text" name="city" value="{{user.city}}">
+                            </div>
+                            <br>
+                            <div class="col-sm-6">
+                                <label class="font-weight-bold" for="state">State:</label>
+                                <input type="text" name="state" value="{{user.state}}">
+                            </div>
+                            <br>
+                            <div class="col-sm-6">
+                                <label class="font-weight-bold" for="zipcode">Zip Code:</label>
+                                <input type="text" name="zipcode" value="{{user.zipcode}}">
+                            </div>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
