@@ -133,6 +133,7 @@ class User:
         query = "SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id WHERE users.id = %(id)s;"
         results = connectToMySQL(cls.db).query_db(query, data)
         user = cls(results[0])
+        orders = []
         for row in results: 
             orderData = {
                 'id': row['orders.id'],
@@ -147,4 +148,4 @@ class User:
                 'updatedAt': row['orders.updatedAt']
             }
             user.orders.append(order.Order(orderData)) 
-        return user 
+        return orders 

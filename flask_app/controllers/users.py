@@ -90,8 +90,6 @@ def accountPage():
 def update():
     if 'user_id' not in session:
         return redirect('/logout')
-    if not User.validate(request.form):
-        return redirect('/account')
     data = {
         "firstName": request.form['firstName'],  
         "lastName": request.form['lastName'],
@@ -99,7 +97,7 @@ def update():
         "city": request.form['city'],
         "state": request.form['state'], 
         "zipcode": request.form['zipcode'],
-        "id": request.form['id']
+        "id": session['user_id']
     }
     User.update(data)
     return redirect('/dashboard')
