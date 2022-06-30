@@ -48,21 +48,9 @@
 
     <div class="dashboard_info text-center">
         <h1>Welcome {{user.firstName}}!</h1>
-        <p>Order your favorites or create a new sub to your liking.</p>
+        <p>Create a new sub to your liking.</p>
     </div>
-    <div class="d-flex justify-content-between">
-        <button class="new_order_button"><a class="start_button" href="/order/new">Start New Order</a></button>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="card-title text-center">Your Favorites:</h2>
-                {% for favorite in userFavorites  %}
-                    <p>{{favorite.meat}} Sub With {{favorite.bread}} bread</p>
-                    <p>Size: {{favorite.size}}</p>
-                {% endfor %}
-            </div>
-        </div>
-        </div>
-    </div>
+
 
 
     <div class="dashboard_bottom_bar">
