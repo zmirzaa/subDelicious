@@ -13,7 +13,7 @@ def editOrder(id):
         return redirect('/logout')
     
     data = {
-        'user_id': session['user_id']
+        'id': session['user_id']
     }
 
     order_data = {
@@ -44,7 +44,7 @@ def updateOrder():
 
 # Checkout Page
 
-@app.route('/order/checkout/<int:id>')
+@app.route('/checkout/<int:id>')
 def checkout(id):
     if 'user_id' not in session:
         return redirect ('/logout')
@@ -52,7 +52,7 @@ def checkout(id):
         'id' : id
     }
     user_data = {
-        'user_id': session['user_id']
+        'id': session['user_id']
     }    
     order = Order.getOneOrder(order_data)
     user = User.getOne(user_data)
@@ -60,19 +60,15 @@ def checkout(id):
 
 # Order Confirmation Page
 
-@app.route('/checkout/confirmation/<int:id>')
-def confirmation(id):
+@app.route('/checkout/confirmation/')
+def confirmation():
     if 'user_id' not in session:
         return redirect ('/logout')
-    order_data = {
-        'id' : id
-    }
     user_data = {
-        'user_id': session['user_id']
-    }    
-    order = Order.getOneOrder(order_data)
+        'id' : session['user_id']
+    }
     user = User.getOne(user_data)
-    return render_template('confirmation.html', order = order, user = user) 
+    return render_template('confirmation.html', user = user) 
 
 
 # Creating a new order!
@@ -102,7 +98,7 @@ def submitOrder():
         'user_id' : session['user_id']       
     }
     Order.newOrder(newOrder)
-    return redirect('/checkout')
+    return render_template('checkout.html')
 
 # if the user deletes their order at checkout (or deletes it from their favorites?)
 
