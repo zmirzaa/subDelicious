@@ -1,3 +1,4 @@
+
 from flask_app.config.mysqlconnection import connectToMySQL 
 from flask_app.models import order
 from flask import flash 
@@ -107,10 +108,11 @@ class User:
     def getUserFavorites(cls,data): 
         query = "SELECT * from orders LEFT join favorites on favorites.order_id = orders.id LEFT JOIN users on favorites.user_id = users.id WHERE users.id = %(id)s;"
         results = connectToMySQL(cls.db).query_db( query, data ) 
-        user = cls(results[0])
+        print(results)
+        favorites = []
         for row in results:
             orderData = {
-                'id': row['orders.id'],
+                'id': row['favorites.id'],
                 'method': row['method'],
                 'size': row['size'],
                 'bread': row['bread'],
@@ -118,22 +120,14 @@ class User:
                 'toppings': row['toppings'],
                 'quantity': row['quantity'],
                 'user_id': row['user_id'],
-                'createdAt': row['orders.createdAt'],
-                'updatedAt': row['orders.updatedAt']
+                'createdAt': row['favorites.createdAt'],
+                'updatedAt': row['favorites.updatedAt']
             }
-            user.favorites.append( order.Order( orderData ) )
-            user.orders.append(orderData["id"])
-        return user
+            favorites.append( order.Order( orderData ) )
+            favorites.append(order)
+            print(orderData)
+        return favorites
         
-    @classmethod
-    def unfavoritedOrders(cls,data):
-        query = "SELECT * FROM orders WHERE orders.id NOT IN ( SELECT order_id FROM favorites WHERE user_id = %(id)s );"
-        results = connectToMySQL('orders').query_db(query,data)
-        orders = []
-        for row in results:
-            orders.append(cls(row))
-        print(orders)
-        return orders
 
     @classmethod 
     def getUserOrders(cls,data):
