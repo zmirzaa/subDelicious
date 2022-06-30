@@ -123,17 +123,12 @@ class User:
                 'createdAt': row['favorites.createdAt'],
                 'updatedAt': row['favorites.updatedAt']
             }
-            user.favorites.append( order.Order( orderData ) )
-            user.orders.append(orderData["id"])
-        return user
-        
             favorites.append( order.Order( orderData ) )
             favorites.append(order)
             print(orderData)
         return favorites
         
 
-        
     @classmethod 
     def getUserOrders(cls,data):
         query = "SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id WHERE users.id = %(id)s;"

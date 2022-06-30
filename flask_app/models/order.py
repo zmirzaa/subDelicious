@@ -56,12 +56,6 @@ class Order:
         return cls(results[0])
 
     @classmethod
-    def getRecentOrder(cls, data):
-        query = 'SELECT * FROM orders LEFT JOIN users on orders.user_id = users.id  where user_id = %(id)s ORDER BY orders.id desc;'
-        results = connectToMySQL(cls.db).query_db(query, data)
-        return cls(results[0])
-
-    @classmethod
     def unfavoritedOrders(cls,data):
         query = "SELECT * FROM orders WHERE orders.id NOT IN ( SELECT order_id FROM favorites WHERE user_id = %(id)s );"
         results = connectToMySQL('orders').query_db(query,data)
