@@ -23,7 +23,6 @@
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="add image">
         <a class="checkout_nav_bar_button" href="/dashboard">Home</a>
     </nav>
-    
 
 
 
@@ -38,7 +37,7 @@
                     <div class="box">
                         <img class="sub_photos" src="{{ url_for('static', filename='img/cart_sub.jpg') }}" alt="sub image">
                         <div class="content">
-                            <h3 class="cart_sub_title">All-American Club</h3>
+                            <h3 class="cart_sub_title">{{user.order}}</h3>
                             <h4>Price: $8.95</h4>
                             <p class="unit">Quantity:<input value="2"></p>
                             <p class="btn-area">
