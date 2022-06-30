@@ -124,17 +124,8 @@ class User:
             user.favorites.append( order.Order( orderData ) )
             user.orders.append(orderData["id"])
         return user
-        
-    @classmethod
-    def unfavoritedOrders(cls,data):
-        query = "SELECT * FROM orders WHERE orders.id NOT IN ( SELECT order_id FROM favorites WHERE user_id = %(id)s );"
-        results = connectToMySQL('orders').query_db(query,data)
-        orders = []
-        for row in results:
-            orders.append(cls(row))
-        print(orders)
-        return orders
 
+        
     @classmethod 
     def getUserOrders(cls,data):
         query = "SELECT * FROM users LEFT JOIN orders ON users.id = orders.user_id WHERE users.id = %(id)s;"
