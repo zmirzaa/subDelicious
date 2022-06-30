@@ -13,18 +13,18 @@
     <nav class="checkout_top_bar">
         <h1 class="dashboard_title">Sub-Delicious</h1>
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
-        <a class="checkout_nav_bar_button" href="/">Logout</a>
+        <a class="checkout_nav_bar_button" href="/logout">Logout</a>
         
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
         <a class="checkout_nav_bar_button" href="/account">My Orders</a>
 
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/account/">My Account</a>
+        <a class="nav_bar_button" href="/account">My Account</a>
         
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="add image">
         <a class="checkout_nav_bar_button" href="/dashboard">Home</a>
     </nav>
-    
+
 
 <div class="thank_you">
     <h1>Thank you for your purchase!</h1>

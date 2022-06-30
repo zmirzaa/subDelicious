@@ -12,29 +12,14 @@
 </head>
 <body id="container">
     
-
-
-
     <nav class="dashboard_top_bar">
         <h1 class="dashboard_title">Sub-Delicious</h1>
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
         <a class="nav_bar_button" href="/">Logout</a>
-        
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/account">My Orders</a>
-        
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/cart.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/order/checkout/">Cart</a>
 
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/account/">My Account</a>
+        <a class="nav_bar_button" href="/account">My Account</a>
     </nav>
-
-
-
-
-
-
 
     <!-- CAROUSEL_SLIDER -->
     <section aria-label="newest photos">
@@ -55,108 +40,24 @@
     </div>
 </section>
 
-<!-- <button class="carousel_button_next" onclick= before(); src="{{ url_for('static', filename='img/img2.jpg') }}" data-carousel-button="next">&#8656;</button>
-<img id="image-area" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="carousel image2">
-<button class="carousel_button_prev" onclick= after(); src="{{ url_for('static', filename='img/sub2.jpg') }}" data-carousel-button="prev">&#8658;</button>
- -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="dashboard_info">
-    <h1>Choose from our Classics</h1>
-    <p>Check out some of our classic subs below or start a new order to your liking!</p>
-</div>
-<div>
-    <button class="new_order_button"><a class="start_button" href="/order/new">Start New Order</a></button>
-</div>
-
-
-
-
-
-<div class="text_above_subs1">
-    <p>Meatball Sub</p>
-    <p>Italian Style</p>
-</div>
-<div class="sub_photos_container1">
-    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo.jpg') }}" alt="sub image">
-    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo1.jpg') }}" alt="sub image">
-</div>
-<div class="start_button_container">
-    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
-    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
-</div>
-
-
-
-
-
-
-
-<div class="text_above_subs2">
-    <p>All-American Club</p>
-    <p>Roast Beef</p>
-</div>
-<div class="sub_photos_container2">
-    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo2.jpg') }}" alt="sub image">
-    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo3.jpg') }}" alt="sub image">
-</div>
-<div class="start_button_container">
-    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
-    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
-</div>
-
-
-
-
-
-
-
-
-
-<div class="text_above_subs3">
-    <p>Baja Steak & Jack</p>
-    <p>Supreme Meats</p>
-</div>
-<div class="sub_photos_container3">
-    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo4.jpg') }}" alt="sub image">
-    <img class="sub_photos" src="{{ url_for('static', filename='img/sub_photo5.jpg') }}" alt="sub image">
-</div>
-<div class="start_button_container">
-    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
-    <button class="start_button"><a class="start_button" href="/order/new">Order This</a></button>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="dashboard_info text-center">
+        <h1>Welcome {{user.firstName}}!</h1>
+        <p>Order your favorites or create a new sub to your liking.</p>
+    </div>
+    <div class="d-flex justify-content-between">
+        <button class="new_order_button"><a class="start_button" href="/order/new">Start New Order</a></button>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center">Your Favorites:</h2>
+                {% for favorite in userFavorites  %}
+                    <p>{{favorite.meat}} Sub With {{favorite.bread}} bread</p>
+                    <p>Size: {{favorite.size}}</p>
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+    </div>
 
 
     <div class="dashboard_bottom_bar">
