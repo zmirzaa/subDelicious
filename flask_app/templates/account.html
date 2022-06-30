@@ -11,7 +11,7 @@
 <body id="profile_container">
 
     <nav class="profile_top_bar">
-        <h1 class="dashboard_title">Sub-Delicious</h1>
+        <h1 class="dashboard_title">SubDelicious</h1>
         <img class="profile_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
         <a class="nav_bar_button" href="/">Logout</a>
         
@@ -64,7 +64,7 @@
 
 <main class="bg-light">
     <form action="/update" method='post' class="profile_container">
-        <div class="row d-flex justfiy-contenet-center">
+        <div class="row d-flex justfiy-content-center">
             <div class="col-md-20 mt-5 pt-5">
                 <div class="row z-depth">
                     <div class="col-sm-4 bg-info rounded-left">
@@ -72,7 +72,11 @@
                             <img class="user_image" src="{{ url_for('static', filename='img/user.png') }}" alt="add image">
                             <br>
                             <br>
-                            <h2 class="font-weight-bold mt-4">Adam Sandler</h2>
+<<<<<<< HEAD
+                            <h2 class="font-weight-bold mt-4">{{user.first_name}}, {{user.last_name}}</h2>
+=======
+                            <h2 class="font-weight-bold mt-4">{{user.firstName}} {{user.lastName}}</h2>
+>>>>>>> 313187309bf78b88bb80eb7ae05f74be34cd0ec5
                             <i class="far fa-edit fa-2x mb-4"></i>
                         </div>
                     </div>
@@ -82,11 +86,11 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <label class="font-weight-bold" for="first_name">First Name:</label>
-                                <input type="text" name="first_name" placeholder="...">
+                                <input type="text" name="first_name" placeholder="{{user.first_name}}">
                             </div>
                             <div class="col-sm-6">
                                 <label class="font-weight-bold" for="last_name">Last Name:</label>
-                                <input type="text" name="last_name" placeholder="...">
+                                <input type="text" name="last_name" placeholder="{{user.last_name}}">
                             </div>
                             <br>
                             <br>
@@ -97,22 +101,22 @@
                         <div class="rom">
                             <div class="col-sm-6">
                                 <label class="font-weight-bold" for="street">Street:</label>
-                                <input type="text" name="street" placeholder="...">
+                                <input type="text" name="street" placeholder="{{user.street}}">
                             </div>
                             <br>
                             <div class="col-sm-6">
                                 <label class="font-weight-bold" for="city">City:</label>
-                                <input type="text" name="city" placeholder="...">
+                                <input type="text" name="city" placeholder="{{user.city}}">
                             </div>
                             <br>
                             <div class="col-sm-6">
                                 <label class="font-weight-bold" for="state">State:</label>
-                                <input type="text" name="state" placeholder="...">
+                                <input type="text" name="state" placeholder="{{user.state}}">
                             </div>
                             <br>
                             <div class="col-sm-6">
                                 <label class="font-weight-bold" for="zipcode">Zip Code:</label>
-                                <input type="text" name="zipcode" placeholder="...">
+                                <input type="text" name="zipcode" placeholder="{{user.zipcode}}">
                             </div>
                             <br>
                         </div>
@@ -124,43 +128,32 @@
 </main>
 <button class="btn btn-lg btn-primary" type="submit" value="update" >Update</button>
 
-
-
-                <!-- ALL JINGA SYTAX ADD TO DIV -->
-<div class="past_order_container">
-    <h1 class="past_order_header">~ Past Orders ~</h1>
-    <div class="date_favorite">
-        <p>Date:1/1/22</p>
+    <table class="past_order_container">
+        <thead class="past_order_header">~ Past Orders ~
+            {{% for orders in allOrders %}}
+            <tr>
+                <td>{{order.quaintity}}</td>
+                <td>{{order.meat}}</td>
+                <td>{{order.bread}}</td>
+                <td>{{order.created_at}}</td>
+            </tr>
+            {{% endfor %}}
+        {% for favorite in userFavorite %}
+            <p>{{favorite.meat}}</p>
+            <p>{{favorite.bread}}</p>
+            <p>{{favorite.size}}</p>
         <input class="favorite_checkbox" type="checkbox" name="accept" id="accept">
         <label class="favorite_past_order" for="accept">Favorite Past Order</label>
     </div>
+<<<<<<< HEAD
+=======
     <div class="past_order_description" >
         <p>Description: meat lovers, large </p>
         <p>Price: $15.40</p>
     </div>
-    <span class="divider"></span>
-    <div class="date_favorite">
-        <p>Date:1/1/22</p>
-        <input class="favorite_checkbox" type="checkbox" name="accept" id="accept">
-        <label class="favorite_past_order" for="accept">Favorite Past Order</label>
-    </div>
-    <div class="past_order_description" >
-        <p>Description: meat lovers, large </p>
-        <p>Price: $15.40</p>
-    </div>
-    <span class="divider"></span>
-    <div class="date_favorite">
-        <p>Date:1/1/22</p>
-        <input class="favorite_checkbox" type="checkbox" name="accept" id="accept">
-        <label class="favorite_past_order" for="accept">Favorite Past Order</label>
-    </div>
-    <div class="past_order_description" >
-        <p>Description: meat lovers, large </p>
-        <p>Price: $15.40</p>
-    </div>
-
 </div>
 
+>>>>>>> 313187309bf78b88bb80eb7ae05f74be34cd0ec5
 
 
 

@@ -8,7 +8,6 @@
     <title>Cart</title>
 </head>
 <body id="container" >
-    
     <nav class="checkout_top_bar">
         <h1 class="dashboard_title">Sub-Delicious</h1>
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
@@ -23,11 +22,6 @@
         <img class="checkout_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="add image">
         <a class="checkout_nav_bar_button" href="/dashboard">Home</a>
     </nav>
-    
-
-
-
-
 
 
     <main>
@@ -47,6 +41,9 @@
                             <p>Price: $8.95</p>
 
                             <p class="unit">Quantity: {{order.quantity}}</p>
+                            <h3 class="cart_sub_title">{{user.order}}</h3>
+                            <h4>Price: $8.95</h4>
+                            <p class="unit">Quantity:<input value="2"></p>
                             <p class="btn-area">
                                 <span class="btn2"><button href="/order/delete/{{order.id}}"></button>Remove</span>
                             </p>
