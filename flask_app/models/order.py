@@ -54,14 +54,3 @@ class Order:
         if len(results) < 1:
             return False
         return cls(results[0])
-
-    @classmethod
-    def unfavoritedOrders(cls,data):
-        query = "SELECT * FROM orders WHERE orders.id NOT IN ( SELECT order_id FROM favorites WHERE user_id = %(id)s );"
-        results = connectToMySQL('orders').query_db(query,data)
-        orders = []
-        for row in results:
-            orders.append(cls(row))
-        print(orders)
-        return orders
-
