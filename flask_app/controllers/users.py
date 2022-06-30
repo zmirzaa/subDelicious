@@ -139,12 +139,3 @@ def logout():
 
 
 
-
-
-
-
-
-@app.route('/test')
-def test(): 
-
-    return render_template("account.html")
