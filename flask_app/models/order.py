@@ -43,6 +43,12 @@ class Order:
         return orders
 
     @classmethod
+    def getRecentOrder(cls, data):
+        query = 'SELECT * FROM orders LEFT JOIN users on orders.user_id = users.id  where user_id = %(id)s ORDER BY orders.id desc;'
+        results = connectToMySQL(cls.db).query_db(query, data)
+        return cls(results[0])
+
+    @classmethod
     def deleteOrder(cls, data):
         query = 'DELETE FROM orders WHERE id = %(id)s;'
         return connectToMySQL(cls.db).query_db(query, data)
