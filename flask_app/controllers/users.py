@@ -71,7 +71,7 @@ def dashboard():
         'id': session['user_id']
     }
 
-    return render_template("dashboard.html", user=User.getOne(data), userFavorites=User.getUserFavorites(data))
+    return render_template("dashboard.html", user=User.getOne(data))
 
 
 @app.route('/account')
