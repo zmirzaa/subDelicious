@@ -88,17 +88,19 @@
 
 
 /* CAROUSEL */
-.carousel{
+/* .carousel{
     width: 100vw;
     height: 65vh;
     position: relative;
     background-color: rgb(83, 83, 83);
 }
+
 .carousel > ul{
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 .slide{
     position: absolute;
     inset: 0;
@@ -151,7 +153,6 @@
     padding: 0 .5rem;
     background-color: rgba(0, 0, 0, 0.1);
 }
-
 .carousel_button_next:hover,
 .carousel_button_next:focus{
     color: white;
@@ -161,12 +162,34 @@
 .carousel_button_prev:focus{
     color: white;
     background-color: rgba(0, 0, 0, .2);
-}
+} */
+        /* END */
+
+
+
+
+
+
+
+
 
 .dashboard_info{
     margin-top: 20px;
     margin-left: 35px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .sub_photos{
     width: 300px;
@@ -175,72 +198,26 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
 }
 
-
-.text_above_subs1{
-    width: 1000;
+.text_above_subs{
+    width: 800px;
     height: 30px;
     margin-bottom: 20px;
     margin-top: 200px;
-    margin-left: 75px;
+    margin-left: 175px;
     display: flex;
     justify-content: space-between;
-    font-size: larger;
+    font-size: x-large;
     font-family: URW Chancery L, cursive;
 }
-.sub_photos_container1{
-    width: 1000px;
+
+.sub_photos_container{
+    width: 1100px;
     height: 200px;
     margin-bottom: 200px;
-    margin-left: 75px;
+    margin-left: 160px;
     display: flex;
     justify-content: space-between;
 }
-
-.text_above_subs2{
-    width: 1000;
-    height: 30px;
-    margin-left: 75px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: larger;
-    font-family: URW Chancery L, cursive;
-
-}
-.sub_photos_container2{
-    width: 1000px;
-    height: 200px;
-    margin-left: 75px;
-    margin-bottom: 200px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.text_above_subs3{
-    width: 1000;
-    height: 30px;
-    margin-left: 75px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: larger;
-    font-family: URW Chancery L, cursive;
-
-}
-.sub_photos_container3{
-    width: 1000px;
-    height: 200px;
-    margin-left: 75px;
-    margin-bottom: 200px;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-
-
-
 
 .dashboard_bottom_bar{
     height: 450px;
@@ -258,40 +235,30 @@
     object-position: center;
 }
 
-
-
-.start_button{
-    width: 120px;
+.new_order_button{
+    width: 160px;
     height: 40px;
+    margin-left: 200px;
     border-radius: 50px;
+    background-color: rgb(51, 116, 255);
+    color: aliceblue;
     text-decoration: none;
-    color: white;
-    background-color: rgb(0, 119, 255);
 }
+
 .start_button_container{
-    width: 800px;
-    margin-top: -180px;
-    margin-left: 230px;
+    width: 1050px;
+    margin-top: -120px;
+    margin-left: 70px;
     margin-bottom: 200px;
     display: flex;
     justify-content: space-between;
 }
-
-
-.new_order_button{
-    width: 145px;
-    height: 40px;
-    margin-left: 200px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(0, 119, 255);
+.classic_images{
+    width: 400px;
+    height: 250px;
+    background-size: contain;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
 }
-
-
-
-
-
 
 
 
@@ -874,3 +841,6 @@
     opacity: 0.5;
     margin-bottom: -100px;
 }
+
+
+

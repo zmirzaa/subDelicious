@@ -25,9 +25,12 @@
         <a class="nav_bar_button" href="/account">My Orders</a>
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
         <a class="nav_bar_button" href="/account">My Account</a>
+        <div>
+            <h1>Welcome, {{user.firstName}}</h1>
+        </div>
     </nav>
                                     <!-- CAROUSEL_SLIDER -->
-    <section aria-label="newest photos">
+    <!-- <section aria-label="newest photos">
         <div class="carousel" data-carousel>
         <button class="carousel_button_next" data-carousel-button="next">&#8656;</button>
         <button class="carousel_button_prev" data-carousel-button="prev">&#8658;</button>
@@ -43,16 +46,13 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
 
 
                                     <!-- WELCOME TEXT -->
     <div class="dashboard_info text-center">
-        <h1>Welcome {{user.firstName}}!</h1>
-        <p>Order your favorites or create a new sub to your liking.</p>
-    </div>
-    <div class="d-flex justify-content-between">
+        <h1>Order your favorites or create a new sub to your liking below.</h1>
         <button class="new_order_button"><a class="start_button" href="/order/new">Start New Order</a></button>
     </div>
 
@@ -71,70 +71,54 @@
 
     <div class="order_classics_container">
         <div class="subs_and_names">
-            <div class="name_of_subs">
+            <div class="text_above_subs">
                 <p>Meatball Sub</p>
                 <p>Italian Sub</p>
             </div> 
-            <div class="images_of_subs">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+            <div class="sub_photos_container">
+                <img class="classic_images" src="{{ url_for('static', filename='img/sub_photo.jpg') }}" alt="logout image">
+                <img class="classic_images" src="{{ url_for('static', filename='img/sub_photo1.jpg') }}" alt="logout image">
             </div>
-            <div class="button_to_order">
-                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
-                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
-            </div>
-        </div>
-    </div>
-    <div class="order_classics_container">
-        <div class="subs_and_names">
-            <div class="name_of_subs">
-                <p>Meatball Sub</p>
-                <p>Italian Sub</p>
-            </div> 
-            <div class="images_of_subs">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
-            </div>
-            <div class="button_to_order">
-                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
-                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
-            </div>
-        </div>
-    </div>
-    <div class="order_classics_container">
-        <div class="subs_and_names">
-            <div class="name_of_subs">
-                <p>Meatball Sub</p>
-                <p>Italian Sub</p>
-            </div> 
-            <div class="images_of_subs">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
-            </div>
-            <div class="button_to_order">
-                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
-                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
-            </div>
-        </div>
-    </div>
-    <div class="order_classics_container">
-        <div class="subs_and_names">
-            <div class="name_of_subs">
-                <p>Meatball Sub</p>
-                <p>Italian Sub</p>
-            </div> 
-            <div class="images_of_subs">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
-                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
-            </div>
-            <div class="button_to_order">
-                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
-                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
+                <div class="start_button_container">
+                    <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
+                    <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
             </div>
         </div>
     </div>
 
+    <div class="order_classics_container">
+        <div class="subs_and_names">
+            <div class="text_above_subs">
+                <p>Meatball Sub</p>
+                <p>Italian Sub</p>
+            </div> 
+            <div class="sub_photos_container">
+                <img class="classic_images" src="{{ url_for('static', filename='img/sub_photo.jpg') }}" alt="logout image">
+                <img class="classic_images" src="{{ url_for('static', filename='img/sub_photo1.jpg') }}" alt="logout image">
+            </div>
+                <div class="start_button_container">
+                    <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
+                    <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
+            </div>
+        </div>
+    </div>
 
+    <div class="order_classics_container">
+        <div class="subs_and_names">
+            <div class="text_above_subs">
+                <p>Meatball Sub</p>
+                <p>Italian Sub</p>
+            </div> 
+            <div class="sub_photos_container">
+                <img class="classic_images" src="{{ url_for('static', filename='img/sub_photo.jpg') }}" alt="logout image">
+                <img class="classic_images" src="{{ url_for('static', filename='img/sub_photo1.jpg') }}" alt="logout image">
+            </div>
+                <div class="start_button_container">
+                    <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
+                    <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
+            </div>
+        </div>
+    </div>
 
 
 
