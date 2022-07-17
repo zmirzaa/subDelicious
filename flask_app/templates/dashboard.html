@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,40 +12,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Sub-Delicious</title>
 </head>
+
+
+
 <body id="container">
     
     <nav class="dashboard_top_bar">
         <h1 class="dashboard_title">Sub-Delicious</h1>
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
         <a class="nav_bar_button" href="/">Logout</a>
-        
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
         <a class="nav_bar_button" href="/account">My Orders</a>
-        
-
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
         <a class="nav_bar_button" href="/account">My Account</a>
     </nav>
-
-    <!-- CAROUSEL_SLIDER -->
+                                    <!-- CAROUSEL_SLIDER -->
     <section aria-label="newest photos">
         <div class="carousel" data-carousel>
         <button class="carousel_button_next" data-carousel-button="next">&#8656;</button>
         <button class="carousel_button_prev" data-carousel-button="prev">&#8658;</button>
-        <ul data-slides>
-            <li class="slide" data-active>
-                <img src="{{ url_for('static', filename='img/img2.jpg') }}" alt="carousel image">
-            </li>
-            <li class="slide">
-                <img src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="carousel image2">
-            </li>
-            <li class="slide">
-                <img src="{{ url_for('static', filename='img/background_sub2.jpg') }}" alt="carousel image3">
-            </li>
-        </ul>
-    </div>
-</section>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="{{ url_for('static', filename='img/img2.jpg') }}" alt="carousel image">
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="carousel image2">
+                </li>
+                <li class="slide">
+                    <img src="{{ url_for('static', filename='img/background_sub2.jpg') }}" alt="carousel image3">
+                </li>
+            </ul>
+        </div>
+    </section>
 
+
+
+                                    <!-- WELCOME TEXT -->
     <div class="dashboard_info text-center">
         <h1>Welcome {{user.firstName}}!</h1>
         <p>Order your favorites or create a new sub to your liking.</p>
@@ -53,11 +57,108 @@
     </div>
 
 
+
+
+
+
+
+
+
+
+                                <!-- BODY OF CLASSIC SUBS -->
+
+
+
+    <div class="order_classics_container">
+        <div class="subs_and_names">
+            <div class="name_of_subs">
+                <p>Meatball Sub</p>
+                <p>Italian Sub</p>
+            </div> 
+            <div class="images_of_subs">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+            </div>
+            <div class="button_to_order">
+                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
+                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="order_classics_container">
+        <div class="subs_and_names">
+            <div class="name_of_subs">
+                <p>Meatball Sub</p>
+                <p>Italian Sub</p>
+            </div> 
+            <div class="images_of_subs">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+            </div>
+            <div class="button_to_order">
+                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
+                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="order_classics_container">
+        <div class="subs_and_names">
+            <div class="name_of_subs">
+                <p>Meatball Sub</p>
+                <p>Italian Sub</p>
+            </div> 
+            <div class="images_of_subs">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+            </div>
+            <div class="button_to_order">
+                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
+                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="order_classics_container">
+        <div class="subs_and_names">
+            <div class="name_of_subs">
+                <p>Meatball Sub</p>
+                <p>Italian Sub</p>
+            </div> 
+            <div class="images_of_subs">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+                <img class="classic_images" src="{{ url_for('static', filename='img/######') }}" alt="logout image">
+            </div>
+            <div class="button_to_order">
+                <button class="new_order_button"><a class="start_button" href="/order/new">Order this</a></button>
+                <button class="new_order_button"><a class="start_button" href="/order/new">Or order this</a></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- BOTTOM OF PAGE -->
+
     <div class="dashboard_bottom_bar">
         &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this. 
     </div>
     
 
+
+
+                        <!-- JAVA SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF630JCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </body>

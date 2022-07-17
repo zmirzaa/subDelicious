@@ -50,7 +50,7 @@ def checkout():
         return redirect ('/logout')
     user_data = {
         'id': session['user_id']
-    }    
+    }
     order = Order.getRecentOrder(user_data)
     user = User.getOne(user_data)
     return render_template('checkout.html', order = order, user = user)
