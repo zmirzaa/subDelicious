@@ -16,44 +16,15 @@
 
 
 <body id="container">
-    
     <nav class="dashboard_top_bar">
         <h1 class="dashboard_title">Sub-Delicious</h1>
-        
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/menu.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/menu">Menu</a>
-        
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/shopping-cart.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/cart">Cart</a>
-        
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/account">My Account</a>
-        
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
         <a class="nav_bar_button" href="/">Logout</a>
-        
-        <div class="username_nav_bar">
-            <p>Welcome, {{user.firstName}}</p>
-        </div>
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/account">My Orders</a>
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/account">My Account</a>
     </nav>
-                                    <!-- CAROUSEL_SLIDER -->
-    <!-- <section aria-label="newest photos">
-        <div class="carousel" data-carousel>
-        <button class="carousel_button_next" data-carousel-button="next">&#8656;</button>
-        <button class="carousel_button_prev" data-carousel-button="prev">&#8658;</button>
-            <ul data-slides>
-                <li class="slide" data-active>
-                    <img src="{{ url_for('static', filename='img/img2.jpg') }}" alt="carousel image">
-                </li>
-                <li class="slide">
-                    <img src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="carousel image2">
-                </li>
-                <li class="slide">
-                    <img src="{{ url_for('static', filename='img/background_sub2.jpg') }}" alt="carousel image3">
-                </li>
-            </ul>
-        </div>
-    </section> -->
 
 
 
@@ -159,10 +130,5 @@
     </div>
     
 
-
-
-                        <!-- JAVA SCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF630JCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 </body>
 </html>

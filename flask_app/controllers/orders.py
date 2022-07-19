@@ -68,6 +68,78 @@ def confirmation():
     return render_template('confirmation.html', user = user) 
 
 
+# Menu Page
+@app.route('/menu')
+def menu():
+    if 'user_id' not in session:
+        return redirect('/logout')
+    user_data = {
+        'id' : session['user_id']
+    }
+    user = User.getOne(user_data)
+    return render_template('menu.html', user = user)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        # EDIT & FIX ROUTE #
+# Cart Page
+
+@app.route('/cart/<int:id>', methods = ['POST'])
+def cart():
+    if 'user_id' not in session:
+        return redirect('/logout')
+    
+    data = {
+        'id': session['user_id']
+    }
+    order_data = {
+        'id' : request.form['id'],
+        'method' : request.form['method'],
+        'size' : request.form['size'],
+        'bread' : request.form['bread'],
+        'meat' : request.form['meat'],
+        'toppings' : request.form['toppings'],
+        'quantity' : request.form['quantity'],
+    }
+    Order.updateOrder(order_data)
+    order = Order.getRecentOrder(order_data)
+    user = User.getOne(data)
+    Order.deleteOrder(order_data)
+    return render_template('cart.html', order = order, user=user)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Creating a new order!
 
 @app.route('/order/new')
