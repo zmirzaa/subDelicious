@@ -12,11 +12,18 @@
 
     <nav class="profile_top_bar">
         <h1 class="dashboard_title">SubDelicious</h1>
-        <img class="profile_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
-        <a class="nav_bar_button" href="/">Logout</a>
-
+        
         <img class="profile_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="add image">
         <a class="nav_bar_button2" href="/dashboard">Home</a>
+
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/menu.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/menu">Menu</a>
+
+        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/shopping-cart.png') }}" alt="add image">
+        <a class="nav_bar_button" href="/cart">Cart</a>
+
+        <img class="profile_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
+        <a class="nav_bar_button" href="/">Logout</a>
     </nav>
 
 <main class="bg-light">

@@ -690,7 +690,7 @@
 
 
 
-            /* ACCOUNT PAGE */
+            /* PROFILE PAGE */
 
 
 #profile_container{
@@ -700,7 +700,7 @@
 }
 .profile_top_bar{
     height: 80px;
-    width: 995px;
+    width: 1030px;
     margin-bottom: -20px;
     margin-top: 10px;
     margin-left: 250px;
@@ -717,7 +717,7 @@
     object-position: center;
 }
 .profile_top_bar_images{
-    margin-left: 100px;
+    margin-left: 80px;
     background-color: rgb(0, 0, 0);
     width: 17px;
     height: 17px;
