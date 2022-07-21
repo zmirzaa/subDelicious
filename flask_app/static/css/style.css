@@ -91,7 +91,7 @@
     border-radius: 50%;
 }
 .username_nav_bar{
-    margin-bottom: -200px;
+    margin-top: -140px;
     margin-left: -20px;
     font-size: large;
 }
@@ -104,11 +104,17 @@
 }
 
 
+
+
+
+
+
+
 .premium_tag{
     width: 150px;
     height: 150px;
     background-size: contain;
-    margin-left: -900px;
+    margin-left: -750px;
     margin-top: 235px;
 }
 
@@ -737,6 +743,3 @@
     opacity: 0.5;
     margin-bottom: -100px;
 }
-
-
-
