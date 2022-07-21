@@ -29,12 +29,22 @@
 
 /* DASHBOARD-TOP BAR */
 .dashboard_title{
-    margin-left: 20px;
+    color: white;
     font-size: xx-large;
     font-family: cursive;
 }
+.dashboard_logo_title{
+    height: 35px;
+    width: 140px;
+    margin-left: 690px;
+    margin-bottom: -80px;
+    margin-top: 30px;
+    color: black;
+    font-size: large;
+    font-family: cursive;
+}
 .dashboard_top_bar{
-    height: 130px;
+    height: 250px;
     width: 1450px;
     margin-bottom: 2px;
     padding-left: 20px;
@@ -53,6 +63,7 @@
     width: 50px;
     height: 30px;
     background-color: rgb(0, 0, 0);
+    font-size: large;
     text-decoration: none;
 }
 .nav_bar_button2{
@@ -63,15 +74,26 @@
     text-decoration: none;
 }
 .dashboard_top_bar_images{
-    margin-left: 150px;
+    margin-left: 200px;
     background-color: rgb(0, 0, 0);
     width: 17px;
     height: 17px;
     background-size: contain;
 }
+.sub_logo{
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    margin-left: 80px;
+    margin-right: -90px;
+    background-color: aliceblue;
+    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
+    border-radius: 50%;
+}
 .username_nav_bar{
-    margin-left: 85px;
-    font-size: x-large;
+    margin-bottom: -200px;
+    margin-left: -20px;
+    font-size: large;
 }
 
 
