@@ -13,35 +13,20 @@
 
 
 
-
-
-
-
-                                    /* ALEX */
-
-
-
             /* DASHBOARD(HOMEPAGE) */
-
-
-
-
-
-
 
 #container{
     width: 1000px;
     height: 1500px;
     background-color: #fff5e1;
 }
-
-
-
 #dashboard_container{
     width: 1000px;
     height: 1400px;
     background-color: #fff5e1;
 }
+
+
 /* DASHBOARD-TOP BAR */
 .dashboard_title{
     margin-left: 20px;
@@ -91,240 +76,19 @@
 
 
 
-/* CAROUSEL */
-/* .carousel{
-    width: 100vw;
-    height: 65vh;
-    position: relative;
-    background-color: rgb(83, 83, 83);
-}
-
-.carousel > ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.slide{
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: 200ms opacity ease-in-out;
-    transition-delay: 200ms;
-}
-
-.slide > img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.5;
-}
-
-.slide[data-active]{
-    opacity: 1;
-    transition-delay: 0ms;
-}
-.carousel_button_next{
-    z-index: 3;
-    position: absolute;
-    margin-top: 30px;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, .5);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.carousel_button_prev{
-    z-index: 3;
-    right: 1rem;
-    position: absolute;
-    margin-top: 30px;
-    background: none;
-    border: none;
-    font-size: 4rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, .5);
-    cursor: pointer;
-    border-radius: .25rem;
-    padding: 0 .5rem;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.carousel_button_next:hover,
-.carousel_button_next:focus{
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
-}
-.carousel_button_prev:hover,
-.carousel_button_prev:focus{
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
-} */
-        /* END */
-
-
-
-
-
-
-
-
-
 .dashboard_info{
     margin-top: 20px;
     margin-left: 35px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.sub_photos{
-    width: 300px;
-    height: 200px;
+.premium_tag{
+    width: 150px;
+    height: 150px;
     background-size: contain;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
+    margin-left: -900px;
+    margin-top: 235px;
 }
-
-.text_above_subs{
-    width: 800px;
-    height: 30px;
-    margin-bottom: 20px;
-    margin-top: 200px;
-    margin-left: 175px;
-    display: flex;
-    justify-content: space-between;
-    font-size: x-large;
-    font-family: URW Chancery L, cursive;
-}
-.price_for_subs{
-    width: 800px;
-    height: 45px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 400px;
-    margin-top: -45px;
-    font-family: URW Chancery L, cursive;
-    font-size: larger;
-}
-
-.sub_photos_container{
-    width: 1100px;
-    height: 200px;
-    margin-bottom: 200px;
-    margin-left: 160px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.dashboard_bottom_bar{
-    height: 450px;
-    width: 1450px;
-    margin-top: 200px;
-    padding-left: 50px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-size: smaller;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
-    opacity: .5;
-    object-fit: cover;
-    object-position: center;
-}
-
-.new_order_button{
-    width: 160px;
-    height: 40px;
-    margin-left: 200px;
-    border-radius: 50px;
-    background-color: rgb(51, 116, 255);
-    color: aliceblue;
-    text-decoration: none;
-}
-
-.start_button_container{
-    width: 1050px;
-    margin-top: -120px;
-    margin-left: 70px;
-    margin-bottom: 200px;
-    display: flex;
-    justify-content: space-between;
-}
-.classic_images{
-    width: 400px;
-    height: 250px;
-    background-size: contain;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -684,12 +448,6 @@
 
 
 
-
-
-
-
-
-
             /* PROFILE PAGE */
 
 
@@ -804,6 +562,108 @@
     display: inline-block;
     border-radius: 50%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    /* MENU PAGE */
+
+
+.sub_photos{
+    width: 300px;
+    height: 200px;
+    background-size: contain;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
+}
+
+.text_above_subs{
+    width: 800px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-top: 200px;
+    margin-left: 175px;
+    display: flex;
+    justify-content: space-between;
+    font-size: x-large;
+    font-family: URW Chancery L, cursive;
+}
+.price_for_subs{
+    width: 800px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 400px;
+    margin-top: -45px;
+    font-family: URW Chancery L, cursive;
+    font-size: larger;
+}
+
+.sub_photos_container{
+    width: 1100px;
+    height: 200px;
+    margin-bottom: 200px;
+    margin-left: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard_bottom_bar{
+    height: 450px;
+    width: 1450px;
+    margin-top: 200px;
+    padding-left: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
+    opacity: .5;
+    object-fit: cover;
+    object-position: center;
+}
+
+.new_order_button{
+    width: 160px;
+    height: 40px;
+    margin-left: 200px;
+    border-radius: 50px;
+    background-color: rgb(51, 116, 255);
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.start_button_container{
+    width: 1050px;
+    margin-top: -120px;
+    margin-left: 70px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.classic_images{
+    width: 400px;
+    height: 250px;
+    background-size: contain;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
+}
+
+
+
 
 
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> 
     <link rel="stylesheet" type="text/js" href="{{ url_for('static',filename='mian.js') }}"> 
     <script src="script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -25,6 +25,8 @@
         
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/shopping-cart.png') }}" alt="add image">
         <a class="nav_bar_button" href="/cart">Cart</a>
+
+        <img class="sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="add image">
         
         <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
         <a class="nav_bar_button" href="/account">My Account</a>
@@ -68,7 +70,10 @@
                         <!-- BOTTOM OF PAGE -->
 
     <div class="dashboard_bottom_bar">
-        &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this. 
+        &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this.
+        <div>
+            <img class="premium_tag" src="{{ url_for('static', filename='img/premium_tag.png') }}" alt="add image">
+        </div>
     </div>
     
 
