@@ -1,69 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> 
-    <link rel="stylesheet" type="text/js" href="{{ url_for('static',filename='mian.js') }}"> 
-    <script src="script.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Sub-Delicious</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> 
+        <link rel="stylesheet" type="text/js" href="{{ url_for('static',filename='css/index.js') }}"> 
+        <script src="script.js" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <title>Sub-Delicious</title>
+    </head>
 
-<body id="container">
-    <h1 class="dashboard_logo_title">Sub-Delicious</h1>
-    <nav class="dashboard_top_bar">
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/menu.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/menu">Menu</a>
+    <body id="container">
+        <h1 class="dashboard_logo_title">Sub-Delicious</h1>
+        <nav class="dashboard_top_bar">
+            <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/menu.png') }}" alt="add image">
+            <a class="nav_bar_button" href="/menu">Menu</a>
         
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/shopping-cart.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/cart">Cart</a>
+            <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/shopping-cart.png') }}" alt="add image">
+            <a class="nav_bar_button" href="/cart">Cart</a>
 
-        <img class="sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="add image">
+            <img class="sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="add image">
         
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
-        <a class="nav_bar_button" href="/account">My Account</a>
+            <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
+            <a class="nav_bar_button" href="/account">My Account</a>
         
-        <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
-        <a class="nav_bar_button" href="/">Logout</a>
+            <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
+            <a class="nav_bar_button" href="/">Logout</a>
         
-        <div class="username_nav_bar">
-            <p>Welcome, {{user.firstName}}</p>
-        </div>
-    </nav>
-
-
-
-
-
-                                    <!-- CAROUSEL  -->
-    
-    <div class="carousel-wrapper">
-        <span id="item_1"></span>
-        <span id="item_2"></span>
-        <span id="item_3"></span>
-
-        <div class="carousel_item_1">
-            <a href="###" class="arrow_prev"></a>
-            <a href="###" class="arrow_next"></a>
-        </div>
-
-        <div class="carousel_item_2">
-            <a href="###" class="arrow_prev"></a>
-            <a href="###" class="arrow_next"></a>
-        </div>
-
-        <div class="carousel_item_3">
-            <a href="###" class="arrow_prev"></a>
-            <a href="###" class="arrow_next"></a>
-        </div>
-    </div>
-
-
-
+            <div class="username_nav_bar">
+                <p>Welcome, {{user.firstName}}</p>
+            </div>
+        </nav>
 
 
 
@@ -72,6 +42,68 @@
         <h1>Order your favorites or create a new sub to your liking below.</h1>
     </div>
 
+
+
+
+
+
+                                    <!-- CAROUSEL  -->
+<div id="slider">
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <div id="slides">
+        <div id="overflow">
+            <div class="inner">
+                <div class="slide slide_1">
+                    <div class="slide_content">
+                        <h2>Slide1</h2>
+                        <p>random text</p>
+                    </div>
+                </div>
+                <div class="slide slide_2">
+                    <div class="slide_content">
+                        <h2>Slide2</h2>
+                        <p>random text</p>
+                    </div>
+                </div>
+                <div class="slide slide_3">
+                    <div class="slide_content">
+                        <h2>Slide3</h2>
+                        <p>random text</p>
+                    </div>
+                </div>
+                <div class="slide slide_4">
+                    <div class="slide_content">
+                        <h2>Slide4</h2>
+                        <p>random text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="controls">
+        <label for="slide1">
+            <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
+        </label>
+        <label for="slide2">
+            <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
+        </label>
+        <label for="slide3">
+            <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
+        </label>
+        <label for="slide4">
+            <img class="arrow_prev" src="{{ url_for('static', filename='img/angle-left.png') }}" alt="left arrow">
+        </label>
+    </div>
+    <div id="bullets">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+        <label for="slide4"></label>
+    </div>
+</div>
 
 
 
@@ -103,10 +135,5 @@
     </div>
     
 
-
-
-                        <!-- JAVA SCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF630JCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-</body>
+    </body>
 </html>
