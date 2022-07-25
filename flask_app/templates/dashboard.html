@@ -37,14 +37,6 @@
 
 
 
-                                    <!-- WELCOME TEXT -->
-    <div class="dashboard_info text-center">
-        <h1>Order your favorites or create a new sub to your liking below.</h1>
-    </div>
-
-
-
-
 
 
                                     <!-- CAROUSEL  -->
@@ -57,12 +49,14 @@
         <div id="overflow">
             <div class="inner">
                 <div class="slide slide_1">
-                    <div class="slide_content">
-                        <h2>Slide1</h2>
+                    <div id="slide_content">
+                        <h2 class="slide_1_text">Slide1</h2>
                         <p>random text</p>
                     </div>
+                    <img class="slide_background_image_1" src="{{ url_for('static', filename='img/carousel.jpg') }}" alt="add image">
                 </div>
                 <div class="slide slide_2">
+                    <img class="slide_background_image_1" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="add image">
                     <div class="slide_content">
                         <h2>Slide2</h2>
                         <p>random text</p>
@@ -127,7 +121,7 @@
 
                         <!-- BOTTOM OF PAGE -->
 
-    <div class="dashboard_bottom_bar">
+    <div class="homepage_bottom_bar">
         &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this.
         <div>
             <img class="premium_tag" src="{{ url_for('static', filename='img/premium_tag.png') }}" alt="add image">

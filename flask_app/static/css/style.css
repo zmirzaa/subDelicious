@@ -109,9 +109,6 @@
 /* <!-- CAROUSEL  --> */
 
 #slider{
-    margin: 0 auto;
-    width: 800px;
-    max-height: 100%;
     text-align: center;
 }
 #slider input[type=radio]{
@@ -122,11 +119,11 @@
     text-decoration: none;
 }
 #slides{
-    padding: 30px;
-    border: 3px solid #ccc;
-    background: #fff;
+    width: 1450px;
+    height: 500px;
+    background-color: #76bfb6;
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
 }
 #overflow{
     width: 100%;
@@ -145,6 +142,7 @@
     margin-left: -300%;
 }
 #slides .inner{
+    margin-bottom: -70px;
     transition: margin-left 800ms cubic-bezier(0.770, 0.000,0.175, 1.000);
     width: 400%;
     line-height: 0;
@@ -159,24 +157,33 @@
 }
 
 #slides .slide_1{
+    width: 1450px;
+    height: 500px;
     background: darkblue;
 }
 #slides .slide_2{
+    width: 1450px;
+    height: 500px;
     background: green;
 }
 #slides .slide_3{
+    width: 1450px;
+    height: 500px;
     background: purple;
 }
 #slides .slide_4{
+    width: 1450px;
+    height: 500px;
     background: peachpuff;
 }
-.slide-content{
-    padding: 10px;
+#slide-content{
+    margin-bottom: -90px;
+    /* padding: 50px; */
 }
 #controls{
-    margin: -130px 0 0 0;
-    width: 100%;
-    height: 50px;
+    height: 40px;
+    width: 1450px;
+    margin-top: -280px;
     z-index: 3;
     position: relative;
 }
@@ -209,7 +216,10 @@
     display: block;
 }
 #bullets{
-    margin: 100px 0 0;
+    width: 200px;
+    height: 30px;
+    margin-top: 275px;
+    margin-left: 650px;
     text-align: center;
 }
 #bullets label{
@@ -229,24 +239,23 @@
 .arrow_next{
     width: 40px;
     height: 40px;
+    margin-left: -80px;
     background-size: contain;
 }
 .arrow_prev{
     width: 40px;
     height: 40px;
+    margin-right: -80px;
     background-size: contain;
 }
-
-
-
-
-
-
-
-
-
-
-
+.slide_background_image_1{
+    width: 1450px;
+    height: 500px;
+    background-size: contain;
+}
+.slide_1_text{
+    color: white;
+}
 
 
 .premium_tag{
@@ -257,6 +266,21 @@
     margin-top: 235px;
 }
 
+.homepage_bottom_bar{
+    height: 450px;
+    width: 1450px;
+    margin-top: 200px;
+    padding-left: 50px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
+    opacity: .5;
+    object-fit: cover;
+    object-position: center;
+}
 
 
 
