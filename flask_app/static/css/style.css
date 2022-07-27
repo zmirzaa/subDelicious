@@ -87,7 +87,7 @@
     margin-left: 80px;
     margin-right: -90px;
     background-color: aliceblue;
-    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
+    box-shadow: 0 5px 10px rgb(151, 150, 150);
     border-radius: 50%;
 }
 .username_nav_bar{
@@ -121,6 +121,7 @@
 #slides{
     width: 1450px;
     height: 500px;
+    margin-top: -2px;
     background-color: #76bfb6;
     position: relative;
     /* z-index: 1; */
@@ -249,6 +250,10 @@
     background-size: contain;
 }
 .slide_background_image_1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1450px;
     height: 500px;
     background-size: contain;
@@ -257,6 +262,7 @@
     color: white;
 }
 
+/* BOTTOM BAR */
 
 .premium_tag{
     width: 150px;
