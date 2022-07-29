@@ -105,7 +105,6 @@
 
 
 
-
 /* <!-- CAROUSEL  --> */
 
 #slider{
@@ -179,7 +178,7 @@
 }
 #slide-content{
     margin-bottom: -90px;
-    /* padding: 50px; */
+    padding: 50px;
 }
 #controls{
     height: 40px;
@@ -262,6 +261,7 @@
     color: white;
 }
 
+
 /* BOTTOM BAR */
 
 .premium_tag{
@@ -288,9 +288,23 @@
     object-position: center;
 }
 
-
-
-
+#bottom_text{
+    color: #444;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    width: 1450px;
+    height: 45px;
+    font-size: large;
+}
+#bottom_text2{
+    color: #444;
+    display: flex;
+    justify-content: center;
+    width: 1450px;
+    height: 50px;
+    font-size: xx-large;
+}
 
 
 

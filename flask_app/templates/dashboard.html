@@ -38,73 +38,75 @@
 
 
 
-
                                     <!-- CAROUSEL  -->
-<div id="slider">
-    <input type="radio" name="slider" id="slide1" checked>
-    <input type="radio" name="slider" id="slide2">
-    <input type="radio" name="slider" id="slide3">
-    <input type="radio" name="slider" id="slide4">
-    <div id="slides">
-        <div id="overflow">
-            <div class="inner">
-                <div class="slide slide_1">
-                    <img class="slide_background_image_1" src="{{ url_for('static', filename='img/carousel.jpg') }}" alt="add image">
-                    <div id="slide_content">
-                        <h2>Slide1</h2>
-                        <p>random text</p>
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+            <div id="overflow">
+                <div class="inner">
+                    <div class="slide slide_1">
+                        <img class="slide_background_image_1" src="{{ url_for('static', filename='img/carousel.jpg') }}" alt="add image">
+                        <div id="slide_content">
+                            <h2>Slide1</h2>
+                            <p>random text</p>
+                        </div>
                     </div>
-                </div>
-                <div class="slide slide_2">
-                    <img class="slide_background_image_1" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="add image">
-                    <div class="slide_content">
-                        <h2>Slide2</h2>
-                        <p>random text</p>
+                    <div class="slide slide_2">
+                        <img class="slide_background_image_1" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="add image">
+                        <div class="slide_content">
+                            <h2>Slide2</h2>
+                            <p>random text</p>
+                        </div>
                     </div>
-                </div>
-                <div class="slide slide_3">
-                    <img class="slide_background_image_1" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="add image">
-                    <div class="slide_content">
-                        <h2>Slide3</h2>
-                        <p>random text</p>
+                    <div class="slide slide_3">
+                        <img class="slide_background_image_1" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="add image">
+                        <div class="slide_content">
+                            <h2>Slide3</h2>
+                            <p>random text</p>
+                        </div>
                     </div>
-                </div>
-                <div class="slide slide_4">
-                    <img class="slide_background_image_1" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="add image">
-                    <div class="slide_content">
-                        <h2>Slide4</h2>
-                        <p>random text</p>
+                    <div class="slide slide_4">
+                        <img class="slide_background_image_1" src="{{ url_for('static', filename='img/background_sub.jpg') }}" alt="add image">
+                        <div class="slide_content">
+                            <h2>Slide4</h2>
+                            <p>random text</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="controls">
+            <label for="slide1">
+                <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
+            </label>
+            <label for="slide2">
+                <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
+            </label>
+            <label for="slide3">
+                <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
+            </label>
+            <label for="slide4">
+                <img class="arrow_prev" src="{{ url_for('static', filename='img/angle-left.png') }}" alt="left arrow">
+            </label>
+        </div>
+        <div id="bullets">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+        </div>
     </div>
-    <div id="controls">
-        <label for="slide1">
-            <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
-        </label>
-        <label for="slide2">
-            <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
-        </label>
-        <label for="slide3">
-            <img class="arrow_next" src="{{ url_for('static', filename='img/angle-right.png') }}" alt="right arrow">
-        </label>
-        <label for="slide4">
-            <img class="arrow_prev" src="{{ url_for('static', filename='img/angle-left.png') }}" alt="left arrow">
-        </label>
+
+
+    <div id="bottom_text">
+        <p>ORDER PICKUP OR DELIVERY ONLINE TODAY</p>
     </div>
-    <div id="bullets">
-        <label for="slide1"></label>
-        <label for="slide2"></label>
-        <label for="slide3"></label>
-        <label for="slide4"></label>
+    <div id="bottom_text2">
+        <h2>FIND A LOCATION NEAR YOU!</h2>
     </div>
-</div>
-
-
-
-
-
 
 
 
