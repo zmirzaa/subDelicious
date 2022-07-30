@@ -299,6 +299,23 @@
     width: 400px;
     border-color: #3a71a9;
 }
+.range_tab{
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+}
+.within_text{
+    margin-right: 30px;
+    font-size: larger;
+}
+.miles_tab{
+    margin-top: -10px;
+}
+.search_button{
+    border-radius: 20%;
+    background-color: rgb(255, 138, 162);
+    width: 600px;
+}
 
 
 /* BOTTOM BAR */
