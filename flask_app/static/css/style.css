@@ -262,19 +262,21 @@
 }
 
 #bottom_text{
+    margin-left: 100px;
     color: #444;
     display: flex;
     justify-content: center;
     margin-top: 200px;
-    width: 1450px;
+    width: 1350px;
     height: 45px;
     font-size: large;
 }
 #bottom_text2{
+    margin-left: 100px;
     color: #444;
     display: flex;
     justify-content: center;
-    width: 1450px;
+    width: 1350px;
     height: 50px;
     font-size: xx-large;
 }
@@ -283,7 +285,6 @@
     margin-left: 400px;
     width: 750px;
     height: 200px;
-    background-color: greenyellow;
 }
 .text_search{
     display: flex;
@@ -311,9 +312,16 @@
 .miles_tab{
     margin-top: -10px;
 }
+.search_button_container{
+    width: 750px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .search_button{
     border-radius: 20%;
-    background-color: rgb(255, 138, 162);
+    background-color: rgb(111, 188, 255);
     width: 600px;
 }
 
