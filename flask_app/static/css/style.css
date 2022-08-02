@@ -838,6 +838,18 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
                     /* MENU PAGE */
 
 #menu_top_bar{
@@ -970,6 +982,56 @@
     background-size: contain;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
 }
+
+
+
+
+
+
+
+
+
+            /* SUB MENU */
+
+#sub_menu_container{
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 1400px;
+    height: 900px;
+    background-color: greenyellow
+}
+
+.top_menu_box{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 1350px;
+    height: 300px;
+    background-color: aquamarine;
+}
+.smaller_menu_box{
+    width: 450px;
+    height: 200px;
+    background-color: pink;
+}
+.menu_picture{
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    background-size: contain;
+}
+
+
+
+
+
+
+
+
+
 
 
 
