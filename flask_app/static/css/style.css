@@ -999,23 +999,32 @@
     margin-top: 30px;
     margin-left: 20px;
     width: 1400px;
-    height: 900px;
-    background-color: greenyellow
+    height: 1400px;
+    display: inline-block;
+    background-color: greenyellow;
 }
 
 .top_menu_box{
     margin-top: 20px;
     margin-left: 10px;
     padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     width: 1350px;
     height: 300px;
     background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .smaller_menu_box{
-    width: 450px;
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    width: 550px;
     height: 200px;
     background-color: pink;
+    display: flex;
 }
 .menu_picture{
     height: 95px;
@@ -1023,8 +1032,33 @@
     border-radius: 50%;
     background-size: contain;
 }
-
-
+.food_title_container{
+    width: 400px;
+    height: 35px;
+    background-color: peru;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.food_title_description{
+    background-color: #3a71a9;
+    padding-left: 20px;
+    width: 450px;
+    height: 100;
+    display: inline-block;
+}
+.food_title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+.food_price{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.food_description{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: smaller;
+}
 
 
 
