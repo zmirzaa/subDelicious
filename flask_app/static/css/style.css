@@ -991,7 +991,6 @@
     width: 1400px;
     height: 1400px;
     display: inline-block;
-    background-color: greenyellow;
 }
 
 .top_menu_box{
@@ -1001,18 +1000,18 @@
     padding-right: 50px;
     width: 1300px;
     height: 225px;
-    background-color: aquamarine;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .smaller_menu_box{
     padding-top: 25px;
-    padding-right: 15px;
+    padding-right: 10px;
     padding-bottom: 20px;
+    padding-left: 15px;
     width: 550px;
     height: 200px;
-    background-color: #fde6b7;
+    background-color: #ffffff;
     box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
     display: flex;
 }
@@ -1020,20 +1019,25 @@
     height: 95px;
     width: 95px;
     border-radius: 50%;
+    margin-top: 5px;
     background-size: contain;
 }
 .food_title_container{
-    width: 400px;
-    height: 35px;
-    background-color: peru;
-    margin-bottom: 25px;
+    width: 410px;
+    height: 40px;
+    margin-bottom: 10px;
     margin-top: 20px;
     padding-right: 20px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+}
+.food_price{
+    width: 50px;
+    height: 30px;
+    margin-top: -30px;
+    margin-left: -50px;
 }
 .food_title_description{
-    background-color: #3a71a9;
     padding-left: 20px;
     width: 450px;
     height: 100;
@@ -1060,7 +1064,30 @@ hr {
     margin-bottom:90px;
     background-color:rgb(35, 35, 35);
 } 
-
+#top_text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 1450px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.line_container{
+    width: 1450px;
+    height: 15px;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lines_top{
+    width: 200px;
+    height: 3px;
+    position: relative;
+    background-color: #444;
+}
 
 
 
