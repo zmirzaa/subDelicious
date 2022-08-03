@@ -93,9 +93,6 @@
     margin-left: -20px;
     font-size: large;
 }
-
-
-
 .dashboard_info{
     margin-top: 20px;
     margin-left: 35px;
@@ -326,7 +323,6 @@
 
 
 /* BOTTOM BAR */
-
 .premium_tag{
     width: 150px;
     height: 150px;
@@ -334,7 +330,6 @@
     margin-left: -750px;
     margin-top: 235px;
 }
-
 .homepage_bottom_bar{
     height: 450px;
     width: 1450px;
@@ -350,6 +345,22 @@
     object-fit: cover;
     object-position: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -592,6 +603,11 @@
 
 
 
+
+
+
+
+
             /* CONFIRMATION PAGE */
 #confirmation_container{
     width: 1000px;
@@ -648,6 +664,9 @@
     object-fit: cover;
     object-position: center;
 }
+
+
+
 
 
 
@@ -842,6 +861,12 @@
 
 
 
+
+
+
+
+
+
                     /* MENU PAGE */
 
 #menu_top_bar{
@@ -981,8 +1006,36 @@
 
 
 
-            /* SUB MENU */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /* SUB MENU */
+#menu_page_container{
+    height: 1400px;
+    width: 1450px;
+    background-color: #fff5e1;
+}
 #sub_menu_container{
     padding-top: 10px;
     padding-left: 10px;
@@ -991,6 +1044,32 @@
     width: 1400px;
     height: 1400px;
     display: inline-block;
+}
+
+#top_text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 1450px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.line_container{
+    width: 1450px;
+    height: 15px;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lines_top{
+    width: 200px;
+    height: 3px;
+    position: relative;
+    background-color: #444;
+    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
 }
 
 .top_menu_box{
@@ -1021,6 +1100,7 @@
     border-radius: 50%;
     margin-top: 5px;
     background-size: contain;
+    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
 }
 .food_title_container{
     width: 410px;
@@ -1064,30 +1144,18 @@ hr {
     margin-bottom:90px;
     background-color:rgb(35, 35, 35);
 } 
-#top_text{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 1450px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: -20px;
-}
-.line_container{
-    width: 1450px;
-    height: 15px;
-    margin-top: -15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.lines_top{
-    width: 200px;
-    height: 3px;
-    position: relative;
-    background-color: #444;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
