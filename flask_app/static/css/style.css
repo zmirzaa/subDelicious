@@ -48,13 +48,11 @@
     width: 1450px;
     margin-bottom: 2px;
     padding-left: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     color: white;
     font-size: large;
     display: flex;
     align-items: center;
-    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
-    opacity: .5;
     object-fit: cover;
     object-position: center;
 }
@@ -62,7 +60,7 @@
     margin-left: 5px;
     width: 50px;
     height: 30px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     font-size: large;
     text-decoration: none;
 }
@@ -70,12 +68,12 @@
     margin-left: 5px;
     width: 45px;
     height: 30px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     text-decoration: none;
 }
 .dashboard_top_bar_images{
     margin-left: 200px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     width: 17px;
     height: 17px;
     background-size: contain;
@@ -395,14 +393,12 @@
     margin-top: 10px;
     margin-left: 250px;
     padding-left: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     color: white;
     font-size: large;
     display: flex;
     align-items: center;
     border-radius: 50px;
-    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
-    opacity: .5;
     object-fit: cover;
     object-position: center;
 }
@@ -412,7 +408,7 @@
 }
 .checkout_top_bar_images{
     margin-left: 100px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     width: 17px;
     height: 17px;
     background-size: contain;
@@ -642,7 +638,7 @@
     width: 1500px;
     margin-top: 100px;
     padding-left: 50px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     color: white;
     font-size: smaller;
     display: flex;
@@ -721,20 +717,18 @@
     margin-top: 10px;
     margin-left: 250px;
     padding-left: 20px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     color: white;
     font-size: large;
     display: flex;
     align-items: center;
     border-radius: 50px;
-    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
-    opacity: .5;
     object-fit: cover;
     object-position: center;
 }
 .profile_top_bar_images{
     margin-left: 80px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     width: 17px;
     height: 17px;
     background-size: contain;
@@ -762,13 +756,11 @@
     width: 1500px;
     margin-top: 90px;
     padding-left: 50px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     color: white;
     font-size: smaller;
     display: flex;
     align-items: center;
-    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
-    opacity: .5;
     object-fit: cover;
     object-position: center;
 }
@@ -856,19 +848,17 @@
     height: 90px;
     width: 1450px;
     margin-bottom: 2px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     color: white;
     font-size: large;
     display: flex;
     align-items: center;
-    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
-    opacity: .5;
     object-fit: cover;
     object-position: center;
 }
 .menu_top_bar_images{
     margin-left: 200px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(75, 75, 75);
     width: 17px;
     height: 17px;
     background-size: contain;
@@ -996,7 +986,7 @@
 #sub_menu_container{
     padding-top: 10px;
     padding-left: 10px;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-left: 20px;
     width: 1400px;
     height: 1400px;
@@ -1007,11 +997,10 @@
 .top_menu_box{
     margin-top: 20px;
     margin-left: 10px;
-    padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
-    width: 1350px;
-    height: 300px;
+    width: 1300px;
+    height: 225px;
     background-color: aquamarine;
     display: flex;
     justify-content: space-between;
@@ -1023,7 +1012,8 @@
     padding-bottom: 20px;
     width: 550px;
     height: 200px;
-    background-color: pink;
+    background-color: #fde6b7;
+    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
     display: flex;
 }
 .menu_picture{
@@ -1038,6 +1028,7 @@
     background-color: peru;
     margin-bottom: 25px;
     margin-top: 20px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-between;
 }
@@ -1059,10 +1050,16 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: smaller;
 }
-
-
-
-
+hr {
+    width: 400px;
+    height: 2px;
+    border: 0 none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    margin-bottom:90px;
+    background-color:rgb(35, 35, 35);
+} 
 
 
 
