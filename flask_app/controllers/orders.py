@@ -21,7 +21,7 @@ def editOrder(id):
     }
     order = Order.getOneOrder(order_data)
     user = User.getOne(data)
-    return render_template('editOrder.html', order = order, user=user)
+    return render_template('newOrder.html', order = order, user=user)
 
 
 @app.route('/order/update', methods = ['POST'])

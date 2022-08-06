@@ -1083,6 +1083,11 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.smaller_menu_box :hover { 
+    font-size: large;
+}
+
 .smaller_menu_box{
     padding-top: 25px;
     padding-right: 10px;
