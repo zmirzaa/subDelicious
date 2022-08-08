@@ -903,7 +903,7 @@
     height: 65px;
     background-size: contain;
     margin-left: -15px;
-    margin-right: -90px;
+    margin-right: 0px;
     background-color: aliceblue;
     box-shadow: 0 5px 10px rgb(151, 150, 150);
     border-radius: 50%;
@@ -1044,6 +1044,9 @@
     width: 1400px;
     height: 1400px;
     display: inline-block;
+}
+.link_sub_logo{
+    margin-left: 235px;
 }
 
 #top_text{

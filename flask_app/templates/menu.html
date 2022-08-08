@@ -29,9 +29,14 @@
         <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
         <a class="nav_bar_button" href="/">Logout</a>
         
-        <p class="menu_logo_title">Sub-Delicious</p>
+        <a class="nav_bar_button2" href="/dashboard">
+            <p class="menu_logo_title">Sub-Delicious</p>
+        </a>
 
-        <img class="menu_sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="sub logo">
+        <a class="link_sub_logo" href="/dashboard">
+            <img class="menu_sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="sub logo">
+        </a>
+
     </nav>
 
 
