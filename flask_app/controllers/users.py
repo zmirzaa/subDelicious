@@ -38,7 +38,6 @@ def register():
         'email': request.form['email'], 
         'password': bcrypt.generate_password_hash(request.form['password'])  
     }
-
     id = User.save(newUser) 
     if not id: 
         flash('Something went wrong!') 
