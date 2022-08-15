@@ -7,166 +7,243 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> 
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans&family=Pathway+Gothic+One&family=Playfair+Display:wght@500&family=Public+Sans:wght@700&family=Righteous&family=Secular+One&display=swap" rel="stylesheet">
-    <title>Add New Sub</title>
+    <title>Sub-Delicious: Add/Edit item </title>
 </head>
 <body>
-    <div id="ordercontainer">
-        <img class="background_sub1" src="{{ url_for('static', filename='img/background_sub1.jpg') }}" alt="background image">
-        <nav class="order_nav_bar">
-            <h1 class="dashboard_title">Sub-Delicious</h1>
-            <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
-            <a class="nav_bar_button" href="/">Logout</a>
-            
-            <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/my_orders.png') }}" alt="add image">
-            <a class="nav_bar_button" href="/account">My Orders</a>
-            
-            <img class="dashboard_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="add image">
+    <div id="order_container">
+        <nav id="menu_top_bar">
+            <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="home image">
+            <a class="nav_bar_button2" href="/dashboard">Home</a>
+    
+            <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/shopping-cart.png') }}" alt="cart image">
+            <a class="nav_bar_button" href="/cart">Cart</a>
+    
+            <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="user account image">
             <a class="nav_bar_button" href="/account">My Account</a>
+    
+            <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
+            <a class="nav_bar_button" href="/">Logout</a>
+    
+            <a class="nav_bar_button2" href="/dashboard">
+                <p class="menu_logo_title">Sub-Delicious</p>
+            </a>
+    
+            <a class="link_sub_logo" href="/dashboard">
+                <img class="menu_sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="sub logo">
+            </a>
         </nav>
-        <main>
-            <div class="card">
-                <div class="card-body text">
-                    <form action="/order/submit" method="post">
-                    {% with messages = get_flashed_messages(category_filter=['order']) %}  
-                        {% if messages %} 
-                        <div class="alert alert-danger" role="alert">
-                            {% for m in messages %}
-                                <p>{{m}}</p>              
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                    {% endwith %}
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="method">Method:</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" name="method" required>
-                                    <option value="Takeout">Takeout</option>
-                                    <option value="Delivery">Delivery</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="quantity">Quantity:</label>
-                            <div class="col-sm-10">
-                                <input type="number" name="quantity" class="form-control" required>
-                            </div>
-                        </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="size">Size:</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" name="size" required>
-                                    <option value="Half-Sub">Half-Sub</option>
-                                    <option value="Full Sub">Full Sub</option>
-                                    <option value="Mega Sub">Mega Sub</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="bread">Bread:</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" name="bread" required>
-                                    <option value="Italian White">Italian White</option>
-                                    <option value="Wheat">Wheat</option>
-                                    <option value="Cheddar Jalapeno">Cheddar Jalapeno</option>
-                                    <option value="Cheddar">Cheddar</option>
-                                    <option value="FlatBread">FlatBread</option>
-                                    <option value="Gluten-Free Wheat">Gluten-Free Wheat</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="meat">Meat:</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" name="meat" required>
-                                    <option value="Chicken">Chicken</option>
-                                    <option value="Turkey">Turkey</option>
-                                    <option value="Tuna">Tuna</option>
-                                    <option value="Veggie Patty">Veggie Patty</option>
-                                    <option value="Meatball">Meatball</option>
-                                    <option value="Honey Ham">Honey Ham</option>
-                                    <option value="Steak">Steak</option>
-                                    <option value="No Meat">No Meat</option>
-                                </select>
-                            </div>
-                        </div> 
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="toppings">Cheese:</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" name="toppings">
-                                    <option value="Swiss">Swiss</option>
-                                    <option value="Pepper Jack">Pepper Jack</option>
-                                    <option value="Cheddar">Cheddar</option>
-                                    <option value="American">American</option>
-                                    <option value="Feta">Feta</option>
-                                    <option value="Mozarella">Mozarella</option>
-                                    <option value="No Cheese">No Cheese</option>
-                                </select>
-                            </div>
+
+    <!-- <img class="background_sub1" src="{{ url_for('static', filename='img/background_sub1.jpg') }}" alt="background image"> --> 
+
+    <main>
+        <div class="card">
+            <div class="card-body text">
+                <form action="/order/submit" method="post">
+                {% with messages = get_flashed_messages(category_filter=['order']) %}  
+                    {% if messages %} 
+                    <div class="alert alert-danger" role="alert">
+                        {% for m in messages %}
+                            <p>{{m}}</p>              
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
+                    <div class="row mb-3">
+                        <label class="col-form-label" for="method">Method:</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" name="method" required>
+                                <option value="Takeout">Takeout</option>
+                                <option value="Delivery">Delivery</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <div class="row mb-3">
-                        <label class="col-form-label" for="toppings">Toppings:</label>
+                    <div class="row mb-3">
+                        <label class="col-form-label" for="quantity">Quantity:</label>
+                        <div class="col-sm-10">
+                            <input type="number" name="quantity" class="form-control" required>
+                        </div>
+                    </div>
+                <div class="d-flex justify-content-between">
+                    <div class="row mb-3">
+                        <label class="col-form-label" for="size">Size:</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" name="size" required>
+                                <option value="Half-Sub">Half-Sub</option>
+                                <option value="Full Sub">Full Sub</option>
+                                <option value="Mega Sub">Mega Sub</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label" for="bread">Bread:</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" name="bread" required>
+                                <option value="Italian White">Italian White</option>
+                                <option value="Wheat">Wheat</option>
+                                <option value="Cheddar Jalapeno">Cheddar Jalapeno</option>
+                                <option value="Cheddar">Cheddar</option>
+                                <option value="FlatBread">FlatBread</option>
+                                <option value="Gluten-Free Wheat">Gluten-Free Wheat</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label" for="meat">Meat:</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" name="meat" required>
+                                <option value="Chicken">Chicken</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Tuna">Tuna</option>
+                                <option value="Veggie Patty">Veggie Patty</option>
+                                <option value="Meatball">Meatball</option>
+                                <option value="Honey Ham">Honey Ham</option>
+                                <option value="Steak">Steak</option>
+                                <option value="No Meat">No Meat</option>
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="row mb-3">
+                        <label class="col-form-label" for="toppings">Cheese:</label>
+                        <div class="col-sm-10">
+                            <select class="form-select" name="toppings">
+                                <option value="Swiss">Swiss</option>
+                                <option value="Pepper Jack">Pepper Jack</option>
+                                <option value="Cheddar">Cheddar</option>
+                                <option value="American">American</option>
+                                <option value="Feta">Feta</option>
+                                <option value="Mozarella">Mozarella</option>
+                                <option value="No Cheese">No Cheese</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="row mb-3">
+                    <label class="col-form-label" for="toppings">Toppings:</label>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Lettuce
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Tomatoes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Jalapeno
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Banana Pepper
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Cucumber
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Red Onion
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Lettuce
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Avocado
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Olives
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                Pickles
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="toppings">
+                            <label class="form-check-label" for="toppings">
+                                None
+                            </label>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-form-label" for="toppings">Extra/Sauces:</label>
                         <div class="col-sm-10">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Lettuce
+                                    Olive Oil
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Tomatoes
+                                    Vinegar
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Jalapeno
+                                    Black Pepper
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Banana Pepper
+                                    Salt
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Cucumber
+                                    Mayo
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Red Onion
+                                    Honey Mustard
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Lettuce
+                                    SubDelicious Special Sauce
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Avocado
+                                    Chipotle
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="toppings">
                                 <label class="form-check-label" for="toppings">
-                                    Olives
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="toppings">
-                                <label class="form-check-label" for="toppings">
-                                    Pickles
+                                    Barbeque 
                                 </label>
                             </div>
                             <div class="form-check">
@@ -176,83 +253,22 @@
                                 </label>
                             </div>
                         </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="toppings">Extra/Sauces:</label>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Olive Oil
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Vinegar
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Black Pepper
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Salt
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Mayo
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Honey Mustard
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        SubDelicious Special Sauce
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Chipotle
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        Barbeque 
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="toppings">
-                                    <label class="form-check-label" for="toppings">
-                                        None
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-primary text-end" type="submit">Add to Cart</button>
-                    </div>
-                    </form>
                 </div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary text-end" type="submit">Add to Cart</button>
+                </div>
+                </form>
             </div>
-            <div class="dashboard_bottom_bar">
-                &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this. 
+        </div>
+
+        <div class="order_page_bottom_bar">
+            &#169; all copyrights reserved to this symbol to the left. Feel like I didn't really need to add this logo or text but I guess it makes it look a bit more professional. On the dl, I like subs, but pizza kinda slaps harder tbh, lol, why are you still reading this.
+            <div>
+                <img class="premium_tag" src="{{ url_for('static', filename='img/premium_tag.png') }}" alt="add image">
             </div>
-        </main>
-    </div>
+        </div>
+
+    </main>
 </body>
 </html>

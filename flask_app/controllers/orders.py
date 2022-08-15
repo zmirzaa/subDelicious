@@ -9,8 +9,8 @@ from flask_app.models.user import User
 
 @app.route('/order/edit/<int:id>')
 def editOrder(id):
-    if 'user_id' not in session:
-        return redirect('/logout')
+    # if 'user_id' not in session:
+    #     return redirect('/logout')
     
     data = {
         'id': session['user_id']
@@ -26,8 +26,8 @@ def editOrder(id):
 
 @app.route('/order/update', methods = ['POST'])
 def updateOrder():
-    if 'user_id' not in session:
-        return redirect('/logout')
+    # if 'user_id' not in session:
+    #     return redirect('/logout')
     if not Order.validate_order(request.form):
         return redirect('/checkout')
     order_data = {
@@ -46,10 +46,10 @@ def updateOrder():
 
 @app.route('/checkout')
 def checkout():
-    if 'user_id' not in session:
-        return redirect ('/logout')
+    # if 'user_id' not in session:
+    #     return redirect ('/logout')
     user_data = {
-        'id': session['user_id']
+        'id': ['user_id']
     }
     order = Order.getRecentOrder(user_data)
     user = User.getOne(user_data)
@@ -59,8 +59,8 @@ def checkout():
 
 @app.route('/checkout/confirmation/')
 def confirmation():
-    if 'user_id' not in session:
-        return redirect ('/logout')
+    # if 'user_id' not in session:
+    #     return redirect ('/logout')
     user_data = {
         'id' : session['user_id']
     }
@@ -71,10 +71,10 @@ def confirmation():
 # Menu Page
 @app.route('/menu')
 def menu():
-    if 'user_id' not in session:
-        return redirect('/logout')
+    # if 'user_id' not in session:
+    #     return redirect('/logout')
     user_data = {
-        'id' : session['user_id']
+        'id' : ['user_id']
     }
     user = User.getOne(user_data)
     return render_template('menu.html', user = user)
@@ -100,8 +100,8 @@ def menu():
 
 @app.route('/cart/<int:id>', methods = ['POST'])
 def cart():
-    if 'user_id' not in session:
-        return redirect('/logout')
+    # if 'user_id' not in session:
+    #     return redirect('/logout')
     
     data = {
         'id': session['user_id']
@@ -144,10 +144,10 @@ def cart():
 
 @app.route('/order/new')
 def newOrder():
-    if 'user_id' not in session: 
-        return redirect ('/logout')
+    # if 'user_id' not in session: 
+    #     return redirect ('/logout')
     data = {
-        'id': session['user_id']
+        'id': ['user_id']
     }
     return render_template('newOrder.html', user=User.getOne(data))
 
@@ -164,7 +164,7 @@ def submitOrder():
         'meat' : request.form['meat'],
         'toppings' : request.form['toppings'],
         'quantity' : request.form['quantity'],
-        'user_id' : session['user_id']       
+        'user_id' : ['user_id']       
     }
     Order.newOrder(newOrder)
     return redirect('/checkout')
@@ -173,8 +173,8 @@ def submitOrder():
 
 @app.route('/order/delete/<int:id>')
 def startOverOrder(id):
-    if 'user_id' not in session:
-        return redirect('/logout')
+    # if 'user_id' not in session:
+    #     return redirect('/logout')
     order_data = {
         'id': id
     }

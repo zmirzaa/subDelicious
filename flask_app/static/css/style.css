@@ -1205,20 +1205,24 @@ hr {
 
         /* OrderNew Page */
 
-#ordercontainer{
-    width: 1000px;
-    height: 1500px;
+#order_container{
+    height: 1400px;
+    width: 1450px;
     background-color: #fff5e1;
 }
-.order_nav_bar{
-    height: 80px;
-    width: 1440px;
-    margin-bottom: 150px;
-    padding-left: 20px;
-    margin-top: -375px;
+
+
+
+
+
+.order_page_bottom_bar{
+    height: 380px;
+    width: 1450px;
+    margin-top: 200px;
+    padding-left: 50px;
     background-color: rgb(0, 0, 0);
     color: white;
-    font-size: large;
+    font-size: smaller;
     display: flex;
     align-items: center;
     box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
@@ -1227,12 +1231,3 @@ hr {
     object-position: center;
 }
 
-.background_sub1{
-    display: block;
-    width: 100%;
-    height: 25%;
-    object-fit: cover;
-    object-position: center;
-    opacity: 0.5;
-    margin-bottom: -100px;
-}
