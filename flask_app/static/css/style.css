@@ -26,8 +26,8 @@
     background-color: #fff5e1;
 }
 #sub_delicious_head_title{
-    margin-top: 20px;
-    margin-bottom: -60px;
+    margin-top: 5px;
+    margin-bottom: -80px;
     margin-left: 40px;
     color: #fff;
     font-size: xx-large;
@@ -40,16 +40,7 @@
     font-size: xx-large;
     font-family: cursive;
 }
-.dashboard_logo_title{
-    height: 35px;
-    width: 140px;
-    margin-left: 690px;
-    margin-bottom: -80px;
-    margin-top: 30px;
-    color: black;
-    font-size: large;
-    font-family: cursive;
-}
+
 .dashboard_top_bar{
     height: 250px;
     width: 1450px;
@@ -86,8 +77,8 @@
     background-size: contain;
 }
 .sub_logo{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-size: contain;
     margin-left: 80px;
     margin-right: -90px;
