@@ -11,15 +11,21 @@
 	margin: 0;
 	}
 
+    #container{
+        width: 1000px;
+        height: 1500px;
+        background-color: #fff5e1;
+    }
+
+
+
+
+
+
 
 
             /* DASHBOARD(HOMEPAGE) */
 
-#container{
-    width: 1000px;
-    height: 1500px;
-    background-color: #fff5e1;
-}
 #dashboard_container{
     width: 1000px;
     height: 1400px;
@@ -35,6 +41,7 @@
 }
 
 /* DASHBOARD-TOP BAR */
+
 .dashboard_title{
     color: white;
     font-size: xx-large;
@@ -116,7 +123,6 @@
     margin-top: -2px;
     background-color: #76bfb6;
     position: relative;
-    /* z-index: 1; */
 }
 #overflow{
     width: 100%;
@@ -1094,12 +1100,7 @@
     justify-content: space-between;
     align-items: center;
 }
-/* 
-.smaller_menu_box :hover { 
-    font-size: large;
-    text-decoration: none;
-    color: #444;
-} */
+
 .menu_link{
     text-decoration: none;
     color: #444;
@@ -1228,4 +1229,3 @@ hr {
     object-fit: cover;
     object-position: center;
 }
-
