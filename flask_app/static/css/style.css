@@ -1011,6 +1011,22 @@
     background-size: contain;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.525);
 }
+.menu_page_bottom_bar{
+    height: 450px;
+    width: 1450px;
+    margin-top: 200px;
+    padding-left: 50px;
+    color: white;
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(151, 150, 150, 0.525);
+    opacity: .5;
+    object-fit: cover;
+    object-position: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(#1c1c1c, #131313);
+}
 
 
 
@@ -1048,7 +1064,7 @@
 #menu_page_container{
     height: 1400px;
     width: 1450px;
-    background-color: #fff5e1;
+    background-image: linear-gradient(#fff5e1, #feda90);
 }
 #sub_menu_container{
     padding-top: 10px;
@@ -1056,7 +1072,7 @@
     margin-top: 60px;
     margin-left: 20px;
     width: 1400px;
-    height: 1400px;
+    height: 975px;
     display: inline-block;
 }
 .link_sub_logo{
