@@ -14,7 +14,7 @@
     #container{
         width: 1000px;
         height: 1500px;
-        background-color: #fff5e1;
+        background-image: linear-gradient(#fff5e1 60%, #feda90);
     }
 
 
@@ -285,7 +285,7 @@
 #search_bar_container{
     margin-left: 400px;
     width: 750px;
-    height: 200px;
+    height: 284px;
 }
 .text_search{
     margin-bottom: -15px;
