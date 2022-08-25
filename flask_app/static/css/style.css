@@ -12,8 +12,8 @@
 	}
 
     #container{
-        width: 1000px;
-        height: 1500px;
+        max-width: 800rem;
+        height: 90rem;
         background-image: linear-gradient(#fff5e1 60%, #feda90);
     }
 
@@ -84,8 +84,8 @@
     background-size: contain;
 }
 .sub_logo{
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     background-size: contain;
     margin-left: 80px;
     margin-right: -90px;
@@ -105,12 +105,13 @@
 
 #bottom_text{
     margin-left: 100px;
+    background-color: #76bfb6;
     color: #444;
     display: flex;
     justify-content: center;
     margin-top: 200px;
-    width: 1350px;
-    height: 45px;
+    max-width: 200rem;
+    max-height: 45rem;
     font-size: large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
