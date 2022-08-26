@@ -43,17 +43,12 @@
 
 /* DASHBOARD-TOP BAR */
 
-.dashboard_title{
-    color: white;
-    font-size: xx-large;
-    font-family: cursive;
-}
 
 .dashboard_top_bar{
-    height: 250px;
-    width: 1450px;
-    margin-bottom: 2px;
-    padding-left: 20px;
+    height: 15.62rem;
+    width: 90.62rem;
+    margin-bottom: .12rem;
+    padding-left: 1.25rem;
     background-color: rgb(75, 75, 75);
     color: white;
     font-size: large;
