@@ -58,9 +58,9 @@
     object-position: center;
 }
 .nav_bar_button{
-    margin-left: 5px;
-    width: 50px;
-    height: 30px;
+    margin-left: .31rem;
+    width: 3.12rem;
+    height: 1.87rem;
     background-color: rgb(75, 75, 75);
     font-size: large;
     text-decoration: none;
