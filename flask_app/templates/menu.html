@@ -15,34 +15,42 @@
 
 
                 <!-- TOP NAV BAR -->
+
 <body id="menu_page_container">
     <nav id="menu_top_bar">
-        <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/home.png') }}" alt="home image">
-        <a class="nav_bar_button2" href="/dashboard">Home</a>
-
-        <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/shopping-cart.png') }}" alt="cart image">
-        <a class="nav_bar_button" href="/cart">Cart</a>
-
-        <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/user_photo.png') }}" alt="user account image">
-        <a class="nav_bar_button" href="/account">My Account</a>
-
-        <img class="menu_top_bar_images" src="{{ url_for('static', filename='img/logout3.png') }}" alt="logout image">
-        <a class="nav_bar_button" href="/">Logout</a>
-
-        <a class="nav_bar_button2" href="/dashboard">
-            <p class="menu_logo_title">Sub-Delicious</p>
-        </a>
-
-        <a class="link_sub_logo" href="/dashboard">
-            <img class="menu_sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="sub logo">
-        </a>
+        <div class="home_page">
+            <a href="/dashboard">
+                <p class="nav_bar_text">Dashboard</p>
+            </a>
+        </div>
+        <div class="cart_page">
+            <a href="/cart">
+                <p class="nav_bar_text">Cart</p>
+            </a>
+        </div>
+        <div class="my_account">
+            <a href="/account">
+                <p class="nav_bar_text">Account</p>
+            </a>
+        </div>
+        <div class="logout">
+            <a href="/">
+                <p class="nav_bar_text">Logout</p>
+            </a>
+        </div>
+        <div class="title_logo_container">
+            <a class="nav_bar_button2" href="/dashboard">
+                <p class="menu_logo_title">Sub-Delicious</p>
+            </a>
+            <a class="link_sub_logo" href="/dashboard">
+                <img class="menu_sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="sub logo">
+            </a>
+        </div>
     </nav>
 
 
-                <!-- BACKGROUND IMG -->
-    <!-- <div>
-        <img class="menu_background_img2" src="{{ url_for('static', filename='img/menu_background_img2.jpg') }}" alt="background image">
-    </div> -->
+
+
 
 
     <div id="top_text">
@@ -51,11 +59,6 @@
     <div class="line_container">
         <div class="lines_top"></div>
     </div>
-
-
-
-
-
 
 
 

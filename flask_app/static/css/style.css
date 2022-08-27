@@ -724,23 +724,17 @@
                     /* MENU PAGE */
 
 #menu_top_bar{
-    height: 90px;
-    width: 1450px;
-    margin-bottom: 2px;
+    height: 5.62rem;
+    width: 90.62rem;
+    margin-bottom: .12rem;
     background-color: rgb(75, 75, 75);
     color: white;
     font-size: large;
     display: flex;
+    justify-content: space-around;
     align-items: center;
     object-fit: cover;
     object-position: center;
-}
-.menu_top_bar_images{
-    margin-left: 200px;
-    background-color: rgb(75, 75, 75);
-    width: 17px;
-    height: 17px;
-    background-size: contain;
 }
 
 .menu_logo_title{
