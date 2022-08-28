@@ -743,6 +743,7 @@
     height: 5.62rem;
     width: 90.62rem;
     margin-bottom: .12rem;
+    padding-left: 6rem;
     background-color: rgb(75, 75, 75);
     color: white;
     font-size: large;
@@ -775,7 +776,7 @@
 .menu_bar_text{
     text-decoration: none;
     color: #fff;
-    background-color: #444;
+    background-color: rgb(75, 75, 75);
     font-size: x-large;
 }
 .title_logo_container{
