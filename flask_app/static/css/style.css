@@ -245,7 +245,7 @@
 
 
             /* CART PAGE */
-#container{
+/* #container{
     background-color: #fff4e0;
 
 }
@@ -434,7 +434,7 @@
 
 
 
-
+ */
 
 
 
@@ -475,7 +475,7 @@
 
 
             /* CONFIRMATION PAGE */
-#confirmation_container{
+/* #confirmation_container{
     width: 1000px;
     height: 1100px;
     background-color: #fff5e1;
@@ -529,7 +529,7 @@
     opacity: .5;
     object-fit: cover;
     object-position: center;
-}
+} */
 
 
 
@@ -589,7 +589,7 @@
 
             /* PROFILE PAGE */
 
-
+/* 
 #profile_container{
     width: 800px;
     height: 950px;
@@ -697,7 +697,7 @@
     display: inline-block;
     border-radius: 50%;
 }
-
+ */
 
 
 
@@ -1090,7 +1090,7 @@ hr {
 
         /* OrderNew Page */
 
-#order_container{
+/* #order_container{
     height: 1400px;
     width: 1450px;
     background-color: #fff5e1;
@@ -1114,4 +1114,4 @@ hr {
     opacity: .5;
     object-fit: cover;
     object-position: center;
-}
+} */
