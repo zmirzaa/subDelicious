@@ -747,25 +747,33 @@
     font-family: cursive;
 }
 .menu_sub_logo{
-    width: 65px;
-    height: 65px;
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1.5rem;
     background-size: contain;
-    margin-left: -15px;
-    margin-right: 0px;
     background-color: aliceblue;
     box-shadow: 0 5px 10px rgb(151, 150, 150);
     border-radius: 50%;
 }
 
-.menu_background_img2{
-    width: 1450px;
-    height: 300px;
-    background-size: cover;
-    background-attachment: fixed;
-    background-blend-mode: multiply;
+.menu_bar_text{
+    text-decoration: none;
+    color: #fff;
+    background-color: #444;
+    font-size: x-large;
 }
-
-
+.title_logo_container{
+    margin-left: 10rem;
+    width: 12rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+.logo_text{
+    color: #fff;
+    font-size: medium;
+    text-decoration: none;
+}
 
 .sub_photos{
     width: 300px;

@@ -18,31 +18,36 @@
 
 <body id="menu_page_container">
     <nav id="menu_top_bar">
+        
         <div class="home_page">
-            <a href="/dashboard">
-                <p class="nav_bar_text">Dashboard</p>
+            <a class="menu_bar_text" href="/dashboard">
+                Dashboard
             </a>
         </div>
+
         <div class="cart_page">
-            <a href="/cart">
-                <p class="nav_bar_text">Cart</p>
+            <a class="menu_bar_text" href="/cart">
+                Cart
             </a>
         </div>
+
         <div class="my_account">
-            <a href="/account">
-                <p class="nav_bar_text">Account</p>
+            <a class="menu_bar_text" href="/account">
+                Account
             </a>
         </div>
+
         <div class="logout">
-            <a href="/">
-                <p class="nav_bar_text">Logout</p>
+            <a class="menu_bar_text" href="/">
+                Logout
             </a>
         </div>
+
         <div class="title_logo_container">
-            <a class="nav_bar_button2" href="/dashboard">
-                <p class="menu_logo_title">Sub-Delicious</p>
+            <a class="logo_text" href="/dashboard">
+                Sub-Delicious
             </a>
-            <a class="link_sub_logo" href="/dashboard">
+            <a href="/dashboard">
                 <img class="menu_sub_logo" src="{{ url_for('static', filename='img/sub_logo.png') }}" alt="sub logo">
             </a>
         </div>
