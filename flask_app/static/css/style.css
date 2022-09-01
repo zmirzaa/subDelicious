@@ -29,8 +29,8 @@
 
         /* DASHBOARD CONTAINER */
 #dashboard_container{
-    width: 1000px;
-    height: 1400px;
+    max-width: 62.5rem;
+    max-height: 87.5rem;
     background-color: #fff5e1;
 }
 
@@ -48,7 +48,7 @@
 
         /* DASHBOARD NAV BAR */
 .dashboard_top_bar{
-    height: 15.62rem;
+    height: 11.62rem;
     width: 90.62rem;
     margin-bottom: .12rem;
     padding-left: 1.25rem;
@@ -62,24 +62,24 @@
 }
 .nav_bar_button{
     margin-left: .31rem;
-    width: 3.12rem;
-    height: 1.87rem;
+    max-width: 3.12rem;
+    max-height: 1.87rem;
     background-color: rgb(75, 75, 75);
     font-size: large;
     text-decoration: none;
 }
 .nav_bar_button2{
     margin-left: 5px;
-    width: 45px;
-    height: 30px;
+    max-width: 2.81rem;
+    max-height: 1.87rem;
     background-color: rgb(75, 75, 75);
     text-decoration: none;
 }
 .dashboard_top_bar_images{
     margin-left: 200px;
     background-color: rgb(75, 75, 75);
-    width: 17px;
-    height: 17px;
+    max-width: 1.06rem;
+    max-height: 1.06rem;
     background-size: contain;
 }
 .sub_logo{
@@ -108,32 +108,31 @@
 }
 
 #bottom_text{
-    margin-left: 100px;
-    background-color: #76bfb6;
+    margin-left: 6.25rem;
     color: #444;
     display: flex;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 12.5rem;
     max-width: 200rem;
     max-height: 45rem;
     font-size: large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #bottom_text2{
-    margin-left: 100px;
+    margin-left: 6.25rem;
     color: #444;
     display: flex;
     justify-content: center;
-    width: 1350px;
-    height: 50px;
+    max-width: 84.37rem;
+    max-height: 3.12rem;
     font-size: xx-large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #search_bar_container{
     margin-left: 400px;
-    width: 750px;
-    height: 284px;
+    max-width: 46.87rem;
+    max-height: 17.75rem;
 }
 .text_search{
     margin-bottom: -15px;
@@ -148,14 +147,14 @@
     justify-content: space-around;
 }
 .search_bar{
-    height: 30px;
-    width: 400px;
+    max-height: 1.87rem;
+    max-width: 25rem;
     border-color: #3a71a9;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 .range_tab{
-    width: 120px;
+    max-width: 10rem;
     display: flex;
     justify-content: space-around;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -169,8 +168,8 @@
     margin-top: -10px;
 }
 .search_button_container{
-    width: 750px;
-    height: 45px;
+    max-width: 46.87rem;
+    max-height: 2.81rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +177,7 @@
 .search_button{
     border-radius: 20%;
     background-color: rgb(111, 188, 255);
-    width: 600px;
+    max-width: 37.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
     /* END DASHBOARD BODY */
